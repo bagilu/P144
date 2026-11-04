@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>師資陣容 | 慈濟大學經營管理學系 Department of Business Management, TCU</title>
+  <style>
+    :root {
+      /* 現代學院風色彩系統：常春藤深海軍藍、典雅勃根地酒紅、暖象牙白與古董紙本色 */
+      --oxford-blue: #0f233a;
+      --oxford-navy: #183354;
+      --burgundy: #7d1d2b;
+      --burgundy-light: #942535;
+      --warm-gold: #c29b38;
+      --gold-light: #f7f1e1;
+      --parchment: #f9f8f5;
+      --surface: #ffffff;
+      --text-primary: #1c2430;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-academic: #e2ddd5;
+      --border-subtle: #eae6df;
+      --tag-bg: #f4efe6;
+      --tag-text: #4a3e2c;
+      --shadow-parchment: 0 4px 14px rgba(15, 35, 58, 0.05);
+      --shadow-hover: 0 10px 25px rgba(15, 35, 58, 0.1);
+      --radius-academic: 4px; /* 學院風偏好克制、典雅的微圓角 */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      background-color: var(--parchment);
+      color: var(--text-primary);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* 襯線標題字體應用於所有學術標題 */
+    h1, h2, h3, .academic-serif {
+      font-family: "Georgia", "Times New Roman", "Songti TC", "Noto Serif TC", serif;
+      letter-spacing: 0.5px;
+    }
+
+    /* Header 頂部學術殿堂風格 */
+    header {
+      background: var(--oxford-blue);
+      color: #ffffff;
+      border-bottom: 4px solid var(--warm-gold);
+      position: relative;
+      padding: 3.5rem 1.5rem 4rem;
+      background-image: 
+        radial-gradient(circle at 50% 10%, rgba(24, 51, 84, 0.8) 0%, rgba(15, 35, 58, 1) 100%),
+        repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.015) 40px, rgba(255,255,255,0.015) 41px);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .insignia-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--warm-gold);
+      border-top: 1px solid rgba(194, 155, 56, 0.4);
+      border-bottom: 1px solid rgba(194, 155, 56, 0.4);
+      padding: 0.35rem 1.25rem;
+      font-weight: 600;
+    }
+
+    .header-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-top: 0.25rem;
+    }
+
+    .header-sub {
+      font-size: 1.1rem;
+      color: #d1d9e2;
+      font-weight: 300;
+      max-width: 760px;
+      line-height: 1.6;
+    }
+
+    /* 主要容器 */
+    main {
+      max-width: 1200px;
+      margin: -2rem auto 4rem;
+      padding: 0 1.25rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* 頂部控制面板：書卷檢索檯風格 */
+    .catalog-bar {
+      background: var(--surface);
+      border: 1px solid var(--border-academic);
+      border-top: 3px solid var(--oxford-navy);
+      border-radius: var(--radius-academic);
+      padding: 1.25rem 1.75rem;
+      box-shadow: var(--shadow-parchment);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 2.75rem;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .academic-filter-btn {
+      background: #fdfdfd;
+      border: 1px solid var(--border-academic);
+      color: var(--text-secondary);
+      padding: 0.45rem 1.15rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: var(--radius-academic);
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .academic-filter-btn:hover {
+      background: var(--gold-light);
+      border-color: var(--warm-gold);
+      color: var(--oxford-blue);
+    }
+
+    .academic-filter-btn.active {
+      background: var(--oxford-navy);
+      border-color: var(--oxford-navy);
+      color: #ffffff;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 260px;
+      max-width: 380px;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 0.6rem 1rem 0.6rem 2.4rem;
+      border: 1px solid var(--border-academic);
+      background-color: #faf8f5;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      border-radius: var(--radius-academic);
+      outline: none;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .search-box input:focus {
+      background-color: #ffffff;
+      border-color: var(--burgundy);
+      box-shadow: 0 0 0 3px rgba(125, 29, 43, 0.12);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      width: 16px;
+      height: 16px;
+      pointer-events: none;
+    }
+
+    /* 學術章節標題 */
+    .academic-section {
+      margin-bottom: 3.75rem;
+    }
+
+    .section-ribbon {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--oxford-blue);
+      padding-bottom: 0.65rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .section-ribbon h2 {
+      font-size: 1.65rem;
+      color: var(--oxford-blue);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-ribbon h2::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 1.2em;
+      background: var(--burgundy);
+    }
+
+    .section-tally {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* 師資名冊網格 */
+    .roster-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 1.75rem;
+    }
+
+    /* 學術卡片本體 */
+    .academic-card {
+      background: var(--surface);
+      border: 1px solid var(--border-academic);
+      border-radius: var(--radius-academic);
+      box-shadow: var(--shadow-parchment);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.25s ease;
+      overflow: hidden;
+    }
+
+    .academic-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--oxford-navy);
+      transition: background 0.25s ease;
+    }
+
+    .academic-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: #cfc6b8;
+    }
+
+    .academic-card:hover::before {
+      background: var(--burgundy);
+    }
+
+    /* 頂部肖像與身分 */
+    .card-crest {
+      padding: 1.5rem 1.5rem 1.15rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      background: linear-gradient(to bottom, #fcfbf9, var(--surface));
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .photo-frame {
+      width: 90px;
+      height: 115px;
+      flex-shrink: 0;
+      border: 1px solid var(--border-academic);
+      background: #eae5dc;
+      position: relative;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .faculty-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: contrast(102%);
+    }
+
+    .photo-fallback {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background: #ede8df;
+      color: #8c8272;
+    }
+
+    .photo-fallback svg {
+      width: 36px;
+      height: 36px;
+      opacity: 0.65;
+    }
+
+    .card-identity {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .name-title-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .faculty-name {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--oxford-blue);
+      line-height: 1.25;
+    }
+
+    .faculty-en-name {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-style: italic;
+      font-family: "Georgia", serif;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .rank-tag {
+      display: inline-block;
+      margin-top: 0.45rem;
+      font-size: 0.8rem;
+      color: var(--burgundy);
+      background: #faf0f2;
+      border-left: 3px solid var(--burgundy);
+      padding: 0.15rem 0.55rem;
+      font-weight: 700;
+      width: fit-content;
+      letter-spacing: 0.3px;
+    }
+
+    /* 內文詳情 */
+    .card-scholarly-body {
+      padding: 1.25rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.95rem;
+      font-size: 0.92rem;
+    }
+
+    .datum-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .datum-label {
+      font-size: 0.775rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .datum-text {
+      color: var(--text-primary);
+      line-height: 1.55;
+    }
+
+    .expertise-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.2rem;
+    }
+
+    .pill {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 0.8rem;
+      padding: 0.2rem 0.55rem;
+      border: 1px solid #e7ded0;
+      border-radius: 2px;
+      line-height: 1.4;
+      font-weight: 500;
+    }
+
+    /* 底部通訊與學術庫 */
+    .card-folio-footer {
+      background: #faf8f5;
+      border-top: 1px solid var(--border-subtle);
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      font-size: 0.86rem;
+    }
+
+    .folio-item {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      color: var(--text-secondary);
+      word-break: break-all;
+    }
+
+    .folio-item a {
+      color: var(--oxford-navy);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .folio-item a:hover {
+      color: var(--burgundy);
+      text-decoration: underline;
+    }
+
+    .academic-icon {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+      stroke: var(--text-muted);
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .pure-scholar-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.35rem;
+      background: #ffffff;
+      border: 1px solid var(--border-academic);
+      color: var(--oxford-blue);
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-academic);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      width: fit-content;
+      transition: all 0.2s ease;
+    }
+
+    .pure-scholar-btn:hover {
+      background: var(--oxford-blue);
+      color: #ffffff;
+      border-color: var(--oxford-blue);
+    }
+
+    /* 行政卡片專用 */
+    .staff-monograph {
+      background: var(--surface);
+      border: 1px solid var(--border-academic);
+      border-left: 4px solid var(--warm-gold);
+      border-radius: var(--radius-academic);
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      box-shadow: var(--shadow-parchment);
+      max-width: 520px;
+    }
+
+    /* 空搜尋提示 */
+    .empty-query {
+      display: none;
+      text-align: center;
+      padding: 4.5rem 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border-academic);
+      border-radius: var(--radius-academic);
+      color: var(--text-muted);
+    }
+
+    .empty-query svg {
+      width: 48px;
+      height: 48px;
+      stroke: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    /* 頁尾：學術機構年鑑風格 */
+    footer {
+      background: var(--oxford-blue);
+      color: #cfd6e0;
+      border-top: 4px solid var(--warm-gold);
+      padding: 3.5rem 1.5rem 2.5rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-columns {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .footer-col h4 {
+      color: #ffffff;
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .footer-col h4::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 30px;
+      height: 2px;
+      background: var(--warm-gold);
+    }
+
+    .footer-col p {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+
+    .footer-col a {
+      color: #f7f1e1;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-col a:hover {
+      color: var(--warm-gold);
+      text-decoration: underline;
+    }
+
+    .footer-colony {
+      max-width: 1200px;
+      margin: 1.75rem auto 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9aa9ba;
+    }
+
+    @media (max-width: 768px) {
+      .header-title { font-size: 1.9rem; }
+      .catalog-bar { flex-direction: column; align-items: stretch; }
+      .search-box { max-width: 100%; }
+      .roster-grid { grid-template-columns: 1fr; }
+      .photo-frame { width: 75px; height: 95px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header: 學院院堂典雅頂欄 -->
+  <header>
+    <div class="header-inner">
+      <div class="insignia-badge">Tzu Chi University · Established 1994</div>
+      <h1 class="header-title">慈濟大學 經營管理學系</h1>
+      <p class="header-sub">Department of Business Management — Faculty Roster & Scholarly Directory</p>
+    </div>
+  </header>
+
+  <!-- 主內容區 -->
+  <main>
+    <!-- 書卷檢索檯 (Catalog Bar) -->
+    <div class="catalog-bar">
+      <div class="filter-group">
+        <button class="academic-filter-btn active" data-filter="all">全體師資與教席</button>
+        <button class="academic-filter-btn" data-filter="fulltime">專任教席 (13)</button>
+        <button class="academic-filter-btn" data-filter="adjunct">兼任與特聘 (23)</button>
+        <button class="academic-filter-btn" data-filter="staff">系務行政 (1)</button>
+      </div>
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="facultySearch" placeholder="檢索教授姓名、專長領域、學歷...">
+      </div>
+    </div>
+
+    <!-- 檢索無結果狀態 -->
+    <div class="empty-query" id="emptyQuery">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <p>文獻檢索無吻合之師資資料，請嘗試更換關鍵字詞。</p>
+    </div>
+
+    <!-- 第一章節：專任師資陣容 -->
+    <section class="academic-section" data-section="fulltime">
+      <div class="section-ribbon">
+        <h2>專任師資陣容</h2>
+        <span class="section-tally">13 位專任教席</span>
+      </div>
+      <div class="roster-grid">
+
+        <!-- 1. 林珍如 -->
+        <article class="academic-card" data-category="fulltime" data-name="林珍如 Chen-Ju Lin" data-specialty="組織創造力 電子傳播與行銷 服務業管理 善良與智慧領導">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/lin_chen_ju.jpg" alt="林珍如教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap">
+                <span class="faculty-name">林珍如</span>
+                <span class="faculty-en-name">Dr. Chen-Ju Lin</span>
+              </div>
+              <span class="rank-tag">教授 兼 系主任</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學位</span>
+              <p class="datum-text">國立東華大學 企業管理博士 (Ph.D., NDHU)</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">主修與研究專長</span>
+              <div class="expertise-pills">
+                <span class="pill">組織創造力</span>
+                <span class="pill">電子傳播與行銷</span>
+                <span class="pill">服務業管理</span>
+                <span class="pill">善良與智慧領導</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-folio-footer">
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:lih5374@gms.tcu.edu.tw">lih5374@gms.tcu.edu.tw</a>
+            </div>
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>03-8572677 分機 33126</span>
+            </div>
+            <a href="https://tcu.elsevierpure.com/zh/persons/chen-ju-lin/publications/" target="_blank" rel="noopener noreferrer" class="pure-scholar-btn">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              Pure 專家著作庫
+            </a>
+          </div>
+        </article>
+
+        <!-- 2. 羅玟甄 -->
+        <article class="academic-card" data-category="fulltime" data-name="羅玟甄 Wen-Chen Lo" data-specialty="財務管理 一般管理">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/lo_wen_chen.jpg" alt="羅玟甄副教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap">
+                <span class="faculty-name">羅玟甄</span>
+                <span class="faculty-en-name">Dr. Wen-Chen Lo</span>
+              </div>
+              <span class="rank-tag">副教授</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學位</span>
+              <p class="datum-text">淡江大學 管理科學研究所博士</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">主修與研究專長</span>
+              <div class="expertise-pills">
+                <span class="pill">財務管理</span>
+                <span class="pill">一般管理</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-folio-footer">
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:wenchen@gms.tcu.edu.tw">wenchen@gms.tcu.edu.tw</a>
+            </div>
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>03-8572677 分機 33070</span>
+            </div>
+            <a href="https://tcu.elsevierpure.com/zh/persons/wen-chen-lo" target="_blank" rel="noopener noreferrer" class="pure-scholar-btn">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              Pure 專家著作庫
+            </a>
+          </div>
+        </article>
+
+        <!-- 3. 游崑慈 -->
+        <article class="academic-card" data-category="fulltime" data-name="游崑慈 Kun-Tzu Yu" data-specialty="品質管理 數學管理 微積分 數理統計">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/yu_kun_tzu.jpg" alt="游崑慈副教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap">
+                <span class="faculty-name">游崑慈</span>
+                <span class="faculty-en-name">Dr. Kun-Tzu Yu</span>
+              </div>
+              <span class="rank-tag">副教授</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學位</span>
+              <p class="datum-text">國立台灣科技大學 工業管理系博士</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">主修與研究專長</span>
+              <div class="expertise-pills">
+                <span class="pill">品質管理</span>
+                <span class="pill">數學管理</span>
+                <span class="pill">微積分</span>
+                <span class="pill">數理統計</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-folio-footer">
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:ykt.kevin@gmail.com">ykt.kevin@gmail.com</a>
+            </div>
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>03-8572677 分機 33182</span>
+            </div>
+            <a href="https://tcu.elsevierpure.com/zh/persons/kun-tzu-yu" target="_blank" rel="noopener noreferrer" class="pure-scholar-btn">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              Pure 專家著作庫
+            </a>
+          </div>
+        </article>
+
+        <!-- 4. 郭又銘 -->
+        <article class="academic-card" data-category="fulltime" data-name="郭又銘 Yu-Ming Kuo Mark Kuo" data-specialty="行銷管理 消費者行為 人力資源管理">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/kuo_yu_ming.jpg" alt="郭又銘副教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap">
+                <span class="faculty-name">郭又銘</span>
+                <span class="faculty-en-name">Dr. Yu-Ming Kuo</span>
+              </div>
+              <span class="rank-tag">副教授 兼 全球事務長</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學位</span>
+              <p class="datum-text">國立中正大學 企業管理學系博士</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">主修與研究專長</span>
+              <div class="expertise-pills">
+                <span class="pill">行銷管理</span>
+                <span class="pill">消費者行為</span>
+                <span class="pill">人力資源管理</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-folio-footer">
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:ss248@gms.tcu.edu.tw">ss248@gms.tcu.edu.tw</a>
+            </div>
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>03-8565301 #11023 / 03-8572677 #22480</span>
+            </div>
+            <a href="https://tcu.elsevierpure.com/zh/persons/mark-kuo" target="_blank" rel="noopener noreferrer" class="pure-scholar-btn">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              Pure 專家著作庫
+            </a>
+          </div>
+        </article>
+
+        <!-- 5. 陳皇曄 -->
+        <article class="academic-card" data-category="fulltime" data-name="陳皇曄 Hwang-Yeh Chen" data-specialty="行銷管理 網絡營銷 客戶關係管理 消費者倫理">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/chen_hwang_yeh.jpg" alt="陳皇曄助理教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap">
+                <span class="faculty-name">陳皇曄</span>
+                <span class="faculty-en-name">Dr. Hwang-Yeh Chen</span>
+              </div>
+              <span class="rank-tag">助理教授</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學位</span>
+              <p class="datum-text">國立東華大學 企管博士 / 喬治華盛頓大學 信息管理碩士</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">主修與研究專長</span>
+              <div class="expertise-pills">
+                <span class="pill">行銷管理</span>
+                <span class="pill">網絡營銷</span>
+                <span class="pill">客戶關係管理</span>
+                <span class="pill">消費者倫理</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-folio-footer">
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:hyjchen@gms.tcu.edu.tw">hyjchen@gms.tcu.edu.tw</a>
+            </div>
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>03-8572677 分機 33177</span>
+            </div>
+            <a href="https://tcu.elsevierpure.com/zh/persons/hwang-yeh-chen" target="_blank" rel="noopener noreferrer" class="pure-scholar-btn">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              Pure 專家著作庫
+            </a>
+          </div>
+        </article>
+
+        <!-- 6. 馮軒綾 -->
+        <article class="academic-card" data-category="fulltime" data-name="馮軒綾 Hsuan-Ling Feng" data-specialty="成本分析 財務報告分析 績效管理 公司治理">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/feng_hsuan_ling.jpg" alt="馮軒綾助理教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap">
+                <span class="faculty-name">馮軒綾</span>
+                <span class="faculty-en-name">Dr. Hsuan-Ling Feng</span>
+              </div>
+              <span class="rank-tag">助理教授</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學位</span>
+              <p class="datum-text">國立東華大學 企管博士 / 國立成功大學 會計暨財金碩士</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">主修與研究專長</span>
+              <div class="expertise-pills">
+                <span class="pill">成本分析</span>
+                <span class="pill">財務報告分析</span>
+                <span class="pill">績效管理</span>
+                <span class="pill">公司治理</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-folio-footer">
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:hlfeng@gms.tcu.edu.tw">hlfeng@gms.tcu.edu.tw</a>
+            </div>
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>03-8572677 分機 33062</span>
+            </div>
+            <a href="https://tcu.elsevierpure.com/zh/persons/hsuan-ling-feng" target="_blank" rel="noopener noreferrer" class="pure-scholar-btn">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              Pure 專家著作庫
+            </a>
+          </div>
+        </article>
+
+        <!-- 7. 林俊銘 -->
+        <article class="academic-card" data-category="fulltime" data-name="林俊銘 Chun-Min Lin" data-specialty="資料庫系統規劃與開發 文字探勘 數位行銷 數位學習 語料庫">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/lin_chun_min.jpg" alt="林俊銘助理教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap">
+                <span class="faculty-name">林俊銘</span>
+                <span class="faculty-en-name">Dr. Chun-Min Lin</span>
+              </div>
+              <span class="rank-tag">助理教授 兼 校務研究中心資料庫組組長</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學位</span>
+              <p class="datum-text">國立東華大學 企管系資管組博士 / 德州理工大學 工程碩士</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">主修與研究專長</span>
+              <div class="expertise-pills">
+                <span class="pill">資料庫系統規劃開發</span>
+                <span class="pill">文字探勘數位行銷</span>
+                <span class="pill">數位學習</span>
+                <span class="pill">語料庫分析</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-folio-footer">
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:sc114@gms.tcu.edu.tw">sc114@gms.tcu.edu.tw</a>
+            </div>
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>03-8572158 分機 33072</span>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="#" class="pure-scholar-btn">
+                <svg class="academic-icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Pure 專家著作庫
+              </a>
+              <a href="#" class="pure-scholar-btn">
+                <svg class="academic-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                學術研究個人網
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8. 蘇美惠 -->
+        <article class="academic-card" data-category="fulltime" data-name="蘇美惠 Mei-Hui Su" data-specialty="循環經濟 市場調查 產業分析 專案管理 成本效益分析">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/su_mei_hui.jpg" alt="蘇美惠助理教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap">
+                <span class="faculty-name">蘇美惠</span>
+                <span class="faculty-en-name">Dr. Mei-Hui Su</span>
+              </div>
+              <span class="rank-tag">助理教授</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學位</span>
+              <p class="datum-text">國立台灣大學 農藝學系博士 / 淡江大學 管理科學碩士</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">主修與研究專長</span>
+              <div class="expertise-pills">
+                <span class="pill">循環經濟</span>
+                <span class="pill">市場調查</span>
+                <span class="pill">產業分析</span>
+                <span class="pill">專案管理</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-folio-footer">
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:maysu@gms.tcu.edu.tw">maysu@gms.tcu.edu.tw</a>
+            </div>
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>03-8572677 分機 33216</span>
+            </div>
+            <a href="https://tcu.elsevierpure.com/zh/persons/mei-hui-su" target="_blank" rel="noopener noreferrer" class="pure-scholar-btn">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              Pure 專家著作庫
+            </a>
+          </div>
+        </article>
+
+        <!-- 9. 徐宜成 -->
+        <article class="academic-card" data-category="fulltime" data-name="徐宜成 I-Cheng Hsu" data-specialty="行銷管理 服務業管理 經濟學 財務管理">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/hsu_i_cheng.jpg" alt="徐宜成助理教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap">
+                <span class="faculty-name">徐宜成</span>
+                <span class="faculty-en-name">Dr. I-Cheng Hsu</span>
+              </div>
+              <span class="rank-tag">助理教授 兼 觀光餐飲系主任</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學位</span>
+              <p class="datum-text">澳洲格里菲斯大學 行銷博士 / 國立東華大學 國際經濟學碩士</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">主修與研究專長</span>
+              <div class="expertise-pills">
+                <span class="pill">行銷管理</span>
+                <span class="pill">服務業管理</span>
+                <span class="pill">經濟學</span>
+                <span class="pill">財務管理</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-folio-footer">
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:sc152@gms.tcu.edu.tw">sc152@gms.tcu.edu.tw</a>
+            </div>
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>03-8572677 分機 33169</span>
+            </div>
+            <a href="https://tcu.elsevierpure.com/zh/persons/i-cheng-hsu" target="_blank" rel="noopener noreferrer" class="pure-scholar-btn">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              Pure 專家著作庫
+            </a>
+          </div>
+        </article>
+
+        <!-- 10. 林信宏 -->
+        <article class="academic-card" data-category="fulltime" data-name="林信宏 Sean Hsin-Hung Lin" data-specialty="觀光行銷 智慧科技與觀光餐旅 數位行銷管理 地方創生與產業創新">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/lin_sean.jpg" alt="林信宏助理教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap">
+                <span class="faculty-name">林信宏</span>
+                <span class="faculty-en-name">Dr. Sean Hsin-Hung Lin</span>
+              </div>
+              <span class="rank-tag">助理教授</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學位</span>
+              <p class="datum-text">國立東華大學 企業管理學系觀光暨休閒遊憩組博士</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">主修與研究專長</span>
+              <div class="expertise-pills">
+                <span class="pill">觀光行銷</span>
+                <span class="pill">智慧科技與觀光餐旅</span>
+                <span class="pill">數位行銷管理</span>
+                <span class="pill">地方創生與產業創新</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-folio-footer">
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:sean@gms.tcu.edu.tw">sean@gms.tcu.edu.tw</a>
+            </div>
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>03-8572677 分機 33083</span>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="https://tcu.elsevierpure.com/zh/persons/sean-hsin-hung-lin" target="_blank" rel="noopener noreferrer" class="pure-scholar-btn">
+                <svg class="academic-icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Pure 專家著作庫
+              </a>
+              <a href="#" class="pure-scholar-btn">
+                <svg class="academic-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                研究與教學網
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 11. 陳逸庭 -->
+        <article class="academic-card" data-category="fulltime" data-name="陳逸庭 I-Ting Chen" data-specialty="接待業管理 工作信仰 優質服務 永續與鄉村旅遊">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/chen_i_ting.jpg" alt="陳逸庭助理教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap">
+                <span class="faculty-name">陳逸庭</span>
+                <span class="faculty-en-name">Dr. I-Ting Chen</span>
+              </div>
+              <span class="rank-tag">助理教授</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學位</span>
+              <p class="datum-text">英國雪菲爾赫倫大學 組織管理學博士 (Sheffield Hallam University)</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">主修與研究專長</span>
+              <div class="expertise-pills">
+                <span class="pill">接待業管理</span>
+                <span class="pill">工作信仰</span>
+                <span class="pill">優質服務</span>
+                <span class="pill">永續與鄉村旅遊</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-folio-footer">
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:lih5374@gms.tcu.edu.tw">lih5374@gms.tcu.edu.tw</a>
+            </div>
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>03-8572677 分機 33034</span>
+            </div>
+            <a href="https://tcu.elsevierpure.com/zh/persons/i-ting-chen/publications/" target="_blank" rel="noopener noreferrer" class="pure-scholar-btn">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              Pure 專家著作庫
+            </a>
+          </div>
+        </article>
+
+        <!-- 12. 吳玉珍 -->
+        <article class="academic-card" data-category="fulltime" data-name="吳玉珍 Yuh-Jen Wu" data-specialty="專業英語 語料庫研究 數量分析方法 旅行業經營與管理">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/wu_yuh_jen.jpg" alt="吳玉珍助理教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap">
+                <span class="faculty-name">吳玉珍</span>
+                <span class="faculty-en-name">Dr. Yuh-Jen Wu</span>
+              </div>
+              <span class="rank-tag">助理教授</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學位</span>
+              <p class="datum-text">國立東華大學 教育博士</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">主修與研究專長</span>
+              <div class="expertise-pills">
+                <span class="pill">專業英語 (ESP)</span>
+                <span class="pill">語料庫研究</span>
+                <span class="pill">數量分析方法</span>
+                <span class="pill">旅行業經營管理</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-folio-footer">
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:juttawu@gms.tcu.edu.tw">juttawu@gms.tcu.edu.tw</a>
+            </div>
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>03-8572677 分機 33116</span>
+            </div>
+            <a href="https://tcu.elsevierpure.com/zh/persons/yuh-jen-wu/" target="_blank" rel="noopener noreferrer" class="pure-scholar-btn">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              Pure 專家著作庫
+            </a>
+          </div>
+        </article>
+
+        <!-- 13. 陳康庭 -->
+        <article class="academic-card" data-category="fulltime" data-name="陳康庭 Konstantin Weicht" data-specialty="管理學 組織理論與管理 組織行為 工作信仰 企業社會責任">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/chen_konstantin.jpg" alt="陳康庭助理教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap">
+                <span class="faculty-name">陳康庭</span>
+                <span class="faculty-en-name">Dr. Konstantin Weicht</span>
+              </div>
+              <span class="rank-tag">助理教授</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學位</span>
+              <p class="datum-text">英國雪菲爾赫倫大學 組織管理博士、研究碩士</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">主修與研究專長</span>
+              <div class="expertise-pills">
+                <span class="pill">組織理論與行為</span>
+                <span class="pill">工作信仰</span>
+                <span class="pill">研究方法</span>
+                <span class="pill">服務產業管理</span>
+                <span class="pill">CSR & 策略領導</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-folio-footer">
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:Konstantin@gms.tcu.edu.tw">Konstantin@gms.tcu.edu.tw</a>
+            </div>
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>03-8572677 分機 33033</span>
+            </div>
+            <a href="https://tcu.elsevierpure.com/zh/persons/konstantin-weicht/" target="_blank" rel="noopener noreferrer" class="pure-scholar-btn">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              Pure 專家著作庫
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 第二章節：兼任與業界師資 -->
+    <section class="academic-section" data-section="adjunct">
+      <div class="section-ribbon">
+        <h2>兼任與業界特聘師資</h2>
+        <span class="section-tally">23 位特聘師資</span>
+      </div>
+      <div class="roster-grid">
+
+        <!-- 1. 陳佩佩 -->
+        <article class="academic-card" data-category="adjunct" data-name="陳佩佩" data-specialty="Small business Business model Leadership Family business">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/chen_pei_pei.jpg" alt="陳佩佩" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">陳佩佩</span></div>
+              <span class="rank-tag">約聘講師</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">學術背景</span>
+              <p class="datum-text">國立東華大學 企業管理學系博士候選人</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">專業領域</span>
+              <div class="expertise-pills">
+                <span class="pill">Small Business</span>
+                <span class="pill">Business Model</span>
+                <span class="pill">Leadership</span>
+                <span class="pill">Business Strategy</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-folio-footer">
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>kamonti...</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. 何日生 -->
+        <article class="academic-card" data-category="adjunct" data-name="何日生 Rey-Sheng Her" data-specialty="慈濟人文研究 宗教哲學 媒體素養 善經濟與善治理研究 哈佛學者">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/her_rey_sheng.jpg" alt="何日生副教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap">
+                <span class="faculty-name">何日生</span>
+                <span class="faculty-en-name">Dr. Rey-Sheng Her</span>
+              </div>
+              <span class="rank-tag">兼任副教授</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學歷 / 社會經歷</span>
+              <p class="datum-text">北京大學哲學博士。慈濟慈善事業基金會副執行長、哈佛大學 FAS CAMLab 合作學者、牛津與劍橋大學訪問學者。</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">專業領域</span>
+              <div class="expertise-pills">
+                <span class="pill">慈濟人文研究</span>
+                <span class="pill">宗教哲學</span>
+                <span class="pill">媒體素養</span>
+                <span class="pill">善經濟與善治理</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. 劉家榛 -->
+        <article class="academic-card" data-category="adjunct" data-name="劉家榛" data-specialty="人力資源管理 行銷理論 餐旅管理研究 個案研究">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/liu_jia_zhen.jpg" alt="劉家榛副教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">劉家榛</span></div>
+              <span class="rank-tag">兼任副教授</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學位</span>
+              <p class="datum-text">國立臺北大學 企業管理學系博士</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">專業領域</span>
+              <div class="expertise-pills">
+                <span class="pill">人力資源管理</span>
+                <span class="pill">行銷理論</span>
+                <span class="pill">餐旅管理研究</span>
+                <span class="pill">個案研究</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. 連志峰 -->
+        <article class="academic-card" data-category="adjunct" data-name="連志峰" data-specialty="經濟學 計量分析 投資學 產業分析">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/lien_chih_feng.jpg" alt="連志峰副教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">連志峰</span></div>
+              <span class="rank-tag">兼任副教授</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學歷</span>
+              <p class="datum-text">逢甲大學 經濟學碩士 / 逢甲大學 企業管理學士</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">專業領域</span>
+              <div class="expertise-pills">
+                <span class="pill">經濟學</span>
+                <span class="pill">計量分析</span>
+                <span class="pill">投資學</span>
+                <span class="pill">產業分析</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-folio-footer">
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:lcf507@tcust.edu.tw">lcf507@tcust.edu.tw</a>
+            </div>
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>03-8572158 分機 2422</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. 徐靜修 -->
+        <article class="academic-card" data-category="adjunct" data-name="徐靜修" data-specialty="心理治療 諮商 臨床研究監督 呼吸焦慮">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/hsu_ching_hsiu.jpg" alt="徐靜修助理教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">徐靜修</span></div>
+              <span class="rank-tag">兼任助理教授</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學位</span>
+              <p class="datum-text">澳洲昆士蘭科技大學 心理諮商學院博士</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">專業領域</span>
+              <div class="expertise-pills">
+                <span class="pill">心理治療與諮商</span>
+                <span class="pill">臨床研究監督</span>
+                <span class="pill">呼吸焦慮應用</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. 遲守國 -->
+        <article class="academic-card" data-category="adjunct" data-name="遲守國" data-specialty="組織行為 人力資源管理 休閒管理 企業社會責任 科技業高階人資">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/chih_shou_kuo.jpg" alt="遲守國助理教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">遲守國</span></div>
+              <span class="rank-tag">兼任助理教授</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學歷 / 產業資歷</span>
+              <p class="datum-text">國立交通大學 經管所博士。曾任惠普科技亞太區人資資深協理、恩智浦半導體人資協理、亞舍立科技人資總監、中華凸版電子人資處長。</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">專業領域</span>
+              <div class="expertise-pills">
+                <span class="pill">組織行為</span>
+                <span class="pill">人力資源管理</span>
+                <span class="pill">休閒管理</span>
+                <span class="pill">企業社會責任</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. 柳瑜佳 -->
+        <article class="academic-card" data-category="adjunct" data-name="柳瑜佳" data-specialty="觀光餐旅英語會話 全人教育">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/liu_yu_chia.jpg" alt="柳瑜佳助理教授" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">柳瑜佳</span></div>
+              <span class="rank-tag">兼任助理教授</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學歷 / 現職</span>
+              <p class="datum-text">國立東華大學 教育與潛能開發學系博士。現任慈濟科技大學全人教育中心兼任助理教授。</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">專業領域</span>
+              <div class="expertise-pills">
+                <span class="pill">觀光餐旅英語會話</span>
+                <span class="pill">全人教育英語</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8. 傅廷暐 -->
+        <article class="academic-card" data-category="adjunct" data-name="傅廷暐" data-specialty="會展實務 青年發展 文創園區">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/fu_ting_wei.jpg" alt="傅廷暐講師" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">傅廷暐</span></div>
+              <span class="rank-tag">兼任講師</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">學術背景 / 產業經歷</span>
+              <p class="datum-text">國立東華大學 企管系博士候選人。曾任花蓮縣青年發展中心執行長、花蓮文創園區副總經理。</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">專業領域</span>
+              <div class="expertise-pills">
+                <span class="pill">會展實務</span>
+                <span class="pill">文創產業規劃</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9. 吳盈瑩 -->
+        <article class="academic-card" data-category="adjunct" data-name="吳盈瑩" data-specialty="蛋糕裝飾 創意烘焙 翻糖捏塑 韓式裱花">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/wu_ying_ying.jpg" alt="吳盈瑩講師" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">吳盈瑩</span></div>
+              <span class="rank-tag">兼任講師</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">背景 / 現職</span>
+              <p class="datum-text">台灣觀光學院肄業。現任「蒨魔法蛋糕」負責人。</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">技術專長</span>
+              <div class="expertise-pills">
+                <span class="pill">蛋糕裝飾</span>
+                <span class="pill">創意烘焙</span>
+                <span class="pill">翻糖捏塑</span>
+                <span class="pill">韓式裱花</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10. 邱献勝 -->
+        <article class="academic-card" data-category="adjunct" data-name="邱献勝" data-specialty="西點烘焙 中式麵食加工 室內配線 自來水配管 飲用水設備">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/chiu_hsien_sheng.jpg" alt="邱献勝講師" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">邱献勝</span></div>
+              <span class="rank-tag">兼任講師</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學位</span>
+              <p class="datum-text">慈濟科技大學 觀光餐旅碩士</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">專業證照與技術</span>
+              <div class="expertise-pills">
+                <span class="pill">西點烘焙乙級</span>
+                <span class="pill">中式麵食加工乙級</span>
+                <span class="pill">室內配線乙級</span>
+                <span class="pill">自來水配管</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-folio-footer">
+            <div class="folio-item">
+              <svg class="academic-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:sp1252@gms.tcu.edu.tw">sp1252@gms.tcu.edu.tw</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 11. 黃淑玲 -->
+        <article class="academic-card" data-category="adjunct" data-name="黃淑玲" data-specialty="中餐烹飪 中西式點心 醬料開發 烘培蛋糕 麵包 調酒">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/huang_shu_ling.jpg" alt="黃淑玲講師" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">黃淑玲</span></div>
+              <span class="rank-tag">兼任講師</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學歷 / 現職</span>
+              <p class="datum-text">臺灣觀光學院 餐旅系碩士。現任陸軍第二地區支援指揮部中餐烹調外聘講師。</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">技術專長</span>
+              <div class="expertise-pills">
+                <span class="pill">中餐烹飪</span>
+                <span class="pill">中西式點心</span>
+                <span class="pill">醬料開發</span>
+                <span class="pill">烘培與調酒</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 12. 林美琪 -->
+        <article class="academic-card" data-category="adjunct" data-name="林美琪" data-specialty="中式料理 西式料理 創意料理 中式米麵食 烘培">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/lin_mei_chi.jpg" alt="林美琪講師" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">林美琪</span></div>
+              <span class="rank-tag">兼任講師</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學歷 / 現職</span>
+              <p class="datum-text">臺灣觀光學院 餐旅系碩士。現任上騰工商餐飲管理科兼任老師。</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">技術專長</span>
+              <div class="expertise-pills">
+                <span class="pill">中西式料理</span>
+                <span class="pill">創意料理</span>
+                <span class="pill">中式米麵食</span>
+                <span class="pill">烘培技術</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 13. 江柏瑩 -->
+        <article class="academic-card" data-category="adjunct" data-name="江柏瑩" data-specialty="美感教育規劃 時尚元素分析 多元飾品創作 婚禮產業分析">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/chiang_po_ying.jpg" alt="江柏瑩講師" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">江柏瑩</span></div>
+              <span class="rank-tag">兼任講師</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學歷 / 現職</span>
+              <p class="datum-text">中國文化大學 藝術研究所碩士。現任「澄瑩整體形象設計」負責人。</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">專業領域</span>
+              <div class="expertise-pills">
+                <span class="pill">美感教育規劃</span>
+                <span class="pill">時尚元素分析</span>
+                <span class="pill">飾品創作</span>
+                <span class="pill">婚禮產業分析</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 14. 黃芳琪 -->
+        <article class="academic-card" data-category="adjunct" data-name="黃芳琪" data-specialty="原住民族工藝文化 物質文化 月桃戲工作室">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/huang_fang_chi.jpg" alt="黃芳琪講師" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">黃芳琪</span></div>
+              <span class="rank-tag">兼任講師</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學歷 / 現職</span>
+              <p class="datum-text">國立臺東大學 南島文化研究所碩士。現任「月桃戲工作室」負責人。</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">研究與工藝專長</span>
+              <div class="expertise-pills">
+                <span class="pill">原住民族工藝文化</span>
+                <span class="pill">物質文化研究</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 15. 曾翼志 -->
+        <article class="academic-card" data-category="adjunct" data-name="曾翼志" data-specialty="策略分析 財務管理 數位廣告 葡萄酒品評">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/tseng_yi_chih.jpg" alt="曾翼志講師" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">曾翼志</span></div>
+              <span class="rank-tag">兼任講師</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學位 / 現職</span>
+              <p class="datum-text">國立東華大學 企業管理研究所碩士。現任「新碩科技有限公司」業務經理。</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">專業領域</span>
+              <div class="expertise-pills">
+                <span class="pill">策略分析</span>
+                <span class="pill">財務管理</span>
+                <span class="pill">數位廣告</span>
+                <span class="pill">葡萄酒品評</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 16. 王振宏 -->
+        <article class="academic-card" data-category="adjunct" data-name="王振宏" data-specialty="導覽解說實務 旅行業管理 遊程規劃實務">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/wang_zhen_hong.jpg" alt="王振宏講師" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">王振宏</span></div>
+              <span class="rank-tag">兼任講師</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學歷 / 現職</span>
+              <p class="datum-text">臺灣觀光學院 餐旅系碩士。現任「欣運小客車租賃有限公司」負責人。</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">實務專長</span>
+              <div class="expertise-pills">
+                <span class="pill">導覽解說實務</span>
+                <span class="pill">旅行業管理</span>
+                <span class="pill">遊程規劃實務</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 17. 林坤茂 -->
+        <article class="academic-card" data-category="adjunct" data-name="林坤茂" data-specialty="網路行銷 廣告與消費心理 微型創業">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/lin_kun_mao.jpg" alt="林坤茂講師" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">林坤茂</span></div>
+              <span class="rank-tag">兼任講師</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學位 / 現職</span>
+              <p class="datum-text">國立東華大學 企業管理研究所碩士。現任「京岳國際股份有限公司」網路行銷籌備處經理。</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">專業領域</span>
+              <div class="expertise-pills">
+                <span class="pill">網路行銷</span>
+                <span class="pill">廣告與消費心理</span>
+                <span class="pill">微型創業</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 18. 劉明恭 -->
+        <article class="academic-card" data-category="adjunct" data-name="劉明恭" data-specialty="精緻果雕 西餐教學 排盤與食品裝飾 食材成本控制 福容大飯店">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/liu_ming_kung.jpg" alt="劉明恭專業技術教師" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">劉明恭</span></div>
+              <span class="rank-tag">講師級專業及技術教師</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">現任職務</span>
+              <p class="datum-text">福容大飯店 副主廚</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">技術專長</span>
+              <div class="expertise-pills">
+                <span class="pill">精緻果雕</span>
+                <span class="pill">西餐教學</span>
+                <span class="pill">排盤飾品擺放</span>
+                <span class="pill">食材成本控制</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 19. 葉益全 -->
+        <article class="academic-card" data-category="adjunct" data-name="葉益全" data-specialty="烘焙食品 西點蛋糕麵包 中式麵食加工 蜜多鄉精緻西點蛋糕">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/yeh_yi_chuan.jpg" alt="葉益全專業技術教師" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">葉益全</span></div>
+              <span class="rank-tag">講師級專業及技術教師</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">現任職務</span>
+              <p class="datum-text">蜜多鄉精緻西點蛋糕 負責人</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">技術專長</span>
+              <div class="expertise-pills">
+                <span class="pill">烘焙食品</span>
+                <span class="pill">西點蛋糕麵包</span>
+                <span class="pill">中式麵食加工</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 20. 陳皇州 -->
+        <article class="academic-card" data-category="adjunct" data-name="陳皇州" data-specialty="咖啡沖煮及調製 調酒製作 咖啡學 餐飲服務操作 飲料調製 葡萄酒品賞 阿莫咖啡">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/chen_huang_chou.jpg" alt="陳皇州專業技術教師" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">陳皇州</span></div>
+              <span class="rank-tag">講師級專業及技術教師</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">現任職務</span>
+              <p class="datum-text">阿莫咖啡 負責人</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">技術專長</span>
+              <div class="expertise-pills">
+                <span class="pill">咖啡沖煮調製</span>
+                <span class="pill">調酒製作</span>
+                <span class="pill">餐飲服務操作</span>
+                <span class="pill">葡萄酒品賞</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 21. 崔柳 -->
+        <article class="academic-card" data-category="adjunct" data-name="崔柳" data-specialty="人力資源 督導管理 顧客關係管理 酒店實務 花蓮翰品酒店">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/tsui_liu.jpg" alt="崔柳專業技術教師" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">崔柳</span></div>
+              <span class="rank-tag">講師級專業及技術教師</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">現任職務</span>
+              <p class="datum-text">花蓮翰品酒店 人力資源部經理</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">專業領域</span>
+              <div class="expertise-pills">
+                <span class="pill">人力資源</span>
+                <span class="pill">督導管理</span>
+                <span class="pill">顧客關係管理</span>
+                <span class="pill">酒店實務</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 22. 柯妮妮 -->
+        <article class="academic-card" data-category="adjunct" data-name="柯妮妮" data-specialty="潛能開發教育 教育與人力發展 遊程規劃與設計 旅行業經營管理 和樂國際旅行社">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/ko_ni_ni.jpg" alt="柯妮妮專業技術教師" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">柯妮妮</span></div>
+              <span class="rank-tag">講師級專業及技術教師</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">最高學歷 / 現職</span>
+              <p class="datum-text">國立東華大學 教育與潛能開發學系碩士。現任和樂國際旅行社副總經理。</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">專業領域</span>
+              <div class="expertise-pills">
+                <span class="pill">潛能開發教育</span>
+                <span class="pill">教育與人力發展</span>
+                <span class="pill">遊程規劃與設計</span>
+                <span class="pill">旅行業經營管理</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 23. 王健仲 -->
+        <article class="academic-card" data-category="adjunct" data-name="王健仲" data-specialty="旅館管理 餐飲管理 遠雄悅來大飯店">
+          <div class="card-crest">
+            <div class="photo-frame">
+              <img src="images/wang_chien_chung.jpg" alt="王健仲專業技術教師" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+            </div>
+            <div class="card-identity">
+              <div class="name-title-wrap"><span class="faculty-name">王健仲</span></div>
+              <span class="rank-tag">講師級專業及技術教師</span>
+            </div>
+          </div>
+          <div class="card-scholarly-body">
+            <div class="datum-row">
+              <span class="datum-label">現任職務</span>
+              <p class="datum-text">花蓮遠雄悅來大飯店 餐飲部協理</p>
+            </div>
+            <div class="datum-row">
+              <span class="datum-label">專業領域</span>
+              <div class="expertise-pills">
+                <span class="pill">旅館管理</span>
+                <span class="pill">餐飲營運管理</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 第三章節：系務行政組 -->
+    <section class="academic-section" data-section="staff">
+      <div class="section-ribbon">
+        <h2>系務行政團隊</h2>
+        <span class="section-tally">1 位行政人員</span>
+      </div>
+      <div>
+        <article class="staff-monograph academic-card" data-category="staff" data-name="張雯萍" data-specialty="行政助理 系務助理 行政管理">
+          <div class="photo-frame" style="width: 75px; height: 95px;">
+            <img src="images/chang_wen_ping.jpg" alt="張雯萍" class="faculty-photo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'photo-fallback\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg></div>';">
+          </div>
+          <div>
+            <div class="name-title-wrap">
+              <span class="faculty-name">張雯萍</span>
+              <span class="rank-tag" style="margin-top: 0.2rem;">系務助理</span>
+            </div>
+            <div style="margin-top: 0.65rem; display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.9rem;">
+              <div class="folio-item">
+                <svg class="academic-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>03-857-2677 分機 31682</span>
+              </div>
+              <div class="folio-item">
+                <svg class="academic-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <a href="mailto:ss62@gms.tcu.edu.tw">ss62@gms.tcu.edu.tw</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer：年鑑風格頁尾 -->
+  <footer>
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4 class="academic-serif">慈濟大學 經營管理學系</h4>
+        <p>Department of Business Management, TCU</p>
+        <p>校址：97004 花蓮市介仁街 67 號（介仁校區）</p>
+        <p>總機電話：03-857-2677 分機 31682</p>
+        <p>公務電郵：<a href="mailto:ss62@gms.tcu.edu.tw">ss62@gms.tcu.edu.tw</a></p>
+      </div>
+      <div class="footer-col">
+        <h4 class="academic-serif">個人資料保護窗口</h4>
+        <p>窗口負責人：林珍如 主任</p>
+        <p>聯絡電話：03-857-2677 分機 33126</p>
+        <p>公務電郵：<a href="mailto:lih5374@gms.tcu.edu.tw">lih5374@gms.tcu.edu.tw</a></p>
+      </div>
+      <div class="footer-col">
+        <h4 class="academic-serif">學術連結與社群</h4>
+        <p><a href="https://tcu.elsevierpure.com/" target="_blank" rel="noopener noreferrer">慈濟大學 Pure 專家人才庫系統</a></p>
+        <p><a href="https://www.youtube.com/@_tcust5687" target="_blank" rel="noopener noreferrer">TCU YouTube 官方頻道</a></p>
+        <p><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">學系 Facebook 粉絲專頁</a></p>
+      </div>
+    </div>
+    <div class="footer-colony">
+      <p class="academic-serif">&copy; 2024 TCU Department of Business Management. All Rights Reserved. 慈濟大學經營管理學系 版權所有</p>
+    </div>
+  </footer>
+
+  <!-- 互動腳本 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('facultySearch');
+      const filterBtns = document.querySelectorAll('.academic-filter-btn');
+      const cards = document.querySelectorAll('.academic-card');
+      const sections = document.querySelectorAll('.academic-section');
+      const emptyNotice = document.getElementById('emptyQuery');
+
+      let currentCategory = 'all';
+      let searchKeyword = '';
+
+      function executeFilter() {
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          const name = (card.getAttribute('data-name') || '').toLowerCase();
+          const specialty = (card.getAttribute('data-specialty') || '').toLowerCase();
+          const fullText = card.innerText.toLowerCase();
+
+          const matchesCategory = (currentCategory === 'all' || category === currentCategory);
+          const matchesKeyword = !searchKeyword || 
+                                 name.includes(searchKeyword) || 
+                                 specialty.includes(searchKeyword) || 
+                                 fullText.includes(searchKeyword);
+
+          if (matchesCategory && matchesKeyword) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        sections.forEach(sec => {
+          const hasVisible = Array.from(sec.querySelectorAll('.academic-card')).some(c => c.style.display !== 'none');
+          sec.style.display = hasVisible ? 'block' : 'none';
+        });
+
+        if (visibleCount === 0) {
+          emptyNotice.style.display = 'block';
+        } else {
+          emptyNotice.style.display = 'none';
+        }
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCategory = btn.getAttribute('data-filter');
+          executeFilter();
+        });
+      });
+
+      searchInput.addEventListener('input', (e) => {
+        searchKeyword = e.target.value.trim().toLowerCase();
+        executeFilter();
+      });
+    });
+  </script>
+</body>
+</html>
