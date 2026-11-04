@@ -16,10 +16,10 @@
             /* Academic Ivy Palette */
             --primary-navy: #0e1e38;      /* 常春藤深海軍藍 */
             --primary-dark: #07101e;
-            --accent-crimson: #8b1d2c;    /* 哈佛/賓大風格經典酒紅 */
-            --accent-gold: #c29b38;       /* 象徵學術榮譽的古銅金 */
+            --accent-crimson: #8b1d2c;    /* 經典酒紅 */
+            --accent-gold: #c29b38;       /* 學術榮譽金 */
             
-            --bg-ivory: #fcfbf9;          /* 仿高級學術紙張色 */
+            --bg-ivory: #fcfbf9;          /* 高級學術紙張色 */
             --bg-card: #ffffff;
             --bg-subtle: #f4f2ee;
             
@@ -81,7 +81,7 @@
             text-decoration: underline;
         }
 
-        /* 2. Primary Navigation (Clean, Prestigious) */
+        /* 2. Primary Navigation */
         .site-header {
             background-color: #ffffff;
             border-bottom: 2px solid var(--accent-crimson);
@@ -162,20 +162,33 @@
             background-color: var(--accent-crimson);
         }
 
-        /* 3. Hero Section (Scholarly, Authoritative) */
+        /* 3. Hero Section (結合 graph/G001.jpg 與防吃字漸層遮罩) */
         .scholarly-hero {
-            background-color: var(--primary-navy);
-            color: var(--text-light);
-            padding: 5.5rem 0 5rem;
             position: relative;
+            padding: 6.5rem 0 5.5rem;
             border-bottom: 1px solid var(--border-light);
+            color: var(--text-light);
+            background-color: var(--primary-navy);
+            
+            /* 關鍵：左側加深確保文字對比度，右側通透展示人物討論模型場景 */
             background-image: 
-                radial-gradient(circle at 100% 0%, rgba(139, 29, 44, 0.25) 0%, transparent 50%),
-                linear-gradient(rgba(14, 30, 56, 0.96), rgba(14, 30, 56, 0.96));
+                linear-gradient(
+                    to right, 
+                    rgba(7, 16, 30, 0.98) 0%, 
+                    rgba(14, 30, 56, 0.92) 40%, 
+                    rgba(14, 30, 56, 0.55) 70%, 
+                    rgba(14, 30, 56, 0.25) 100%
+                ),
+                url('graph/G001.jpg');
+            background-position: center right;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         .hero-inner {
-            max-width: 900px;
+            max-width: 820px;
+            position: relative;
+            z-index: 2;
         }
 
         .hero-rubric {
@@ -189,24 +202,26 @@
             margin-bottom: 1.2rem;
             border-bottom: 1px solid var(--accent-gold);
             padding-bottom: 4px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .hero-heading {
             font-family: var(--font-serif);
-            font-size: 3rem;
+            font-size: 3.1rem;
             line-height: 1.2;
             font-weight: 700;
             margin-bottom: 1.6rem;
             letter-spacing: -0.5px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
         }
 
         .hero-lead {
             font-size: 1.2rem;
-            line-height: 1.8;
-            color: #d2dbe5;
-            font-weight: 300;
+            line-height: 1.85;
+            color: #e5edf5;
+            font-weight: 400;
             margin-bottom: 2.2rem;
-            font-family: var(--font-sans);
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
         }
 
         .hero-cta-group {
@@ -223,7 +238,7 @@
             letter-spacing: 0.8px;
             text-transform: uppercase;
             padding: 0.85rem 2rem;
-            border-radius: 0px; /* Ivy schools favor crisp right-angles over rounded bubbles */
+            border-radius: 0px;
             text-decoration: none;
             transition: var(--trans-smooth);
             cursor: pointer;
@@ -233,22 +248,26 @@
             background-color: var(--accent-crimson);
             color: #ffffff;
             border: 1px solid var(--accent-crimson);
+            box-shadow: 0 4px 12px rgba(139, 29, 44, 0.35);
         }
 
         .btn-crimson:hover {
             background-color: #701522;
             border-color: #701522;
+            transform: translateY(-2px);
         }
 
         .btn-ghost-light {
-            background: transparent;
+            background: rgba(7, 16, 30, 0.4);
             color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(4px);
         }
 
         .btn-ghost-light:hover {
             border-color: #ffffff;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
         }
 
         /* Common Container */
@@ -290,7 +309,7 @@
             margin-bottom: 3.2rem;
         }
 
-        /* 5. Mission & Pillars (Dean's Overview & Academic Tenets) */
+        /* 5. Mission & Pillars */
         .overview-grid {
             display: grid;
             grid-template-columns: 1.3fr 1fr;
@@ -376,7 +395,7 @@
             line-height: 1.55;
         }
 
-        /* 6. Facilities & Laboratories (HBS Case Classrooms / Research Centers) */
+        /* 6. Facilities & Laboratories */
         .facilities-section {
             background-color: var(--bg-subtle);
         }
@@ -449,7 +468,7 @@
             padding-top: 0.8rem;
         }
 
-        /* 7. Curriculum & Academic Pillars Tabs */
+        /* 7. Curriculum & Academic Tabs */
         .curriculum-module {
             background: #ffffff;
             border: 1px solid var(--border-light);
@@ -606,6 +625,9 @@
                 grid-template-columns: 1fr;
                 gap: 2.5rem;
             }
+            .scholarly-hero {
+                background-position: 70% center;
+            }
         }
 
         @media (max-width: 768px) {
@@ -613,10 +635,21 @@
                 display: none;
             }
             .main-nav {
-                display: none; /* Mobile Menu Fallback */
+                display: none;
             }
             .hero-heading {
                 font-size: 2.2rem;
+            }
+            .scholarly-hero {
+                padding: 4.5rem 0 4rem;
+                /* 行動端加重漸層深度以保護小螢幕閱讀 */
+                background-image: 
+                    linear-gradient(
+                        to bottom, 
+                        rgba(7, 16, 30, 0.95) 0%, 
+                        rgba(14, 30, 56, 0.88) 100%
+                    ),
+                    url('graph/G001.jpg');
             }
             .facility-list {
                 grid-template-columns: 1fr;
@@ -673,7 +706,7 @@
         </div>
     </header>
 
-    <!-- Scholarly Hero Banner -->
+    <!-- Scholarly Hero Banner (含 graph/G001.jpg 橫幅背景) -->
     <section class="scholarly-hero">
         <div class="container">
             <div class="hero-inner">
@@ -826,7 +859,7 @@
                         </div>
                     </article>
 
-                    <!-- Facility 6 / Academic Synthesis -->
+                    <!-- Facility 6 -->
                     <article class="facility-item" style="background: var(--primary-navy); border-color: var(--primary-navy);">
                         <div class="facility-type-tag" style="color: var(--accent-gold);">Academic Ecosystem · 06</div>
                         <div class="facility-content" style="color: #ffffff;">

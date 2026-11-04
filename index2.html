@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Business Management | Tzu Chi University</title>
+    
+    <!-- Google Academic Fonts: Classic Serif & Refined Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Internal CSS (Ivy League & Top Business School Aesthetic) -->
+    <style>
+        :root {
+            /* Academic Ivy Palette */
+            --primary-navy: #0e1e38;      /* 常春藤深海軍藍 */
+            --primary-dark: #07101e;
+            --accent-crimson: #8b1d2c;    /* 哈佛/賓大風格經典酒紅 */
+            --accent-gold: #c29b38;       /* 象徵學術榮譽的古銅金 */
+            
+            --bg-ivory: #fcfbf9;          /* 仿高級學術紙張色 */
+            --bg-card: #ffffff;
+            --bg-subtle: #f4f2ee;
+            
+            --border-light: #e4dfd5;
+            --border-dark: #1b2838;
+            
+            --text-heading: #121c2d;
+            --text-body: #2b3542;
+            --text-muted: #5e6d82;
+            --text-light: #f7f9fa;
+
+            --font-display: 'Cinzel', 'Playfair Display', 'Noto Serif TC', serif;
+            --font-serif: 'Merriweather', 'Noto Serif TC', Georgia, serif;
+            --font-sans: 'Inter', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+            
+            --trans-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-ivory);
+            color: var(--text-body);
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 1. Academic Meta / Top Utility Bar */
+        .academic-topbar {
+            background-color: var(--primary-dark);
+            color: #b0bec5;
+            font-size: 0.76rem;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .academic-topbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .academic-topbar a {
+            color: #d1d5db;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: var(--trans-smooth);
+        }
+
+        .academic-topbar a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        /* 2. Primary Navigation (Clean, Prestigious) */
+        .site-header {
+            background-color: #ffffff;
+            border-bottom: 2px solid var(--accent-crimson);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .site-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.4rem 2rem;
+        }
+
+        .univ-identity {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+
+        .univ-title {
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            color: var(--accent-crimson);
+            text-transform: uppercase;
+        }
+
+        .dept-title {
+            font-family: var(--font-display);
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            letter-spacing: -0.2px;
+            margin-top: 2px;
+        }
+
+        .dept-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+            font-family: var(--font-sans);
+        }
+
+        .main-nav {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 4px;
+            transition: var(--trans-smooth);
+        }
+
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--accent-crimson);
+        }
+
+        .main-nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent-crimson);
+        }
+
+        /* 3. Hero Section (Scholarly, Authoritative) */
+        .scholarly-hero {
+            background-color: var(--primary-navy);
+            color: var(--text-light);
+            padding: 5.5rem 0 5rem;
+            position: relative;
+            border-bottom: 1px solid var(--border-light);
+            background-image: 
+                radial-gradient(circle at 100% 0%, rgba(139, 29, 44, 0.25) 0%, transparent 50%),
+                linear-gradient(rgba(14, 30, 56, 0.96), rgba(14, 30, 56, 0.96));
+        }
+
+        .hero-inner {
+            max-width: 900px;
+        }
+
+        .hero-rubric {
+            display: inline-block;
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid var(--accent-gold);
+            padding-bottom: 4px;
+        }
+
+        .hero-heading {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 1.6rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-lead {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #d2dbe5;
+            font-weight: 300;
+            margin-bottom: 2.2rem;
+            font-family: var(--font-sans);
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1.2rem;
+        }
+
+        .btn-academic {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.88rem;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 0.85rem 2rem;
+            border-radius: 0px; /* Ivy schools favor crisp right-angles over rounded bubbles */
+            text-decoration: none;
+            transition: var(--trans-smooth);
+            cursor: pointer;
+        }
+
+        .btn-crimson {
+            background-color: var(--accent-crimson);
+            color: #ffffff;
+            border: 1px solid var(--accent-crimson);
+        }
+
+        .btn-crimson:hover {
+            background-color: #701522;
+            border-color: #701522;
+        }
+
+        .btn-ghost-light {
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .btn-ghost-light:hover {
+            border-color: #ffffff;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        /* Common Container */
+        .container {
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* 4. Section Structure */
+        .academic-section {
+            padding: 5.5rem 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .section-pretitle {
+            font-family: var(--font-display);
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--accent-crimson);
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+        }
+
+        .section-title-large {
+            font-family: var(--font-serif);
+            font-size: 2.3rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+            letter-spacing: -0.3px;
+        }
+
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-navy);
+            margin-bottom: 3.2rem;
+        }
+
+        /* 5. Mission & Pillars (Dean's Overview & Academic Tenets) */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .mission-prose {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            line-height: 1.85;
+        }
+
+        .mission-prose p {
+            margin-bottom: 1.5rem;
+        }
+
+        .mission-quote {
+            border-left: 3px solid var(--accent-crimson);
+            padding-left: 1.6rem;
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--primary-navy);
+            margin: 2rem 0;
+            background: var(--bg-subtle);
+            padding: 1.5rem 1.8rem;
+        }
+
+        /* Academic Tenets Column */
+        .tenets-column {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-light);
+            padding: 2.2rem;
+            border-top: 4px solid var(--primary-navy);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        .tenets-heading {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: var(--primary-navy);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid var(--border-light);
+            text-transform: uppercase;
+        }
+
+        .tenet-item {
+            margin-bottom: 1.6rem;
+            padding-bottom: 1.4rem;
+            border-bottom: 1px dashed var(--border-light);
+        }
+
+        .tenet-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .tenet-index {
+            font-family: var(--font-display);
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .tenet-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 0.35rem;
+        }
+
+        .tenet-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+        }
+
+        /* 6. Facilities & Laboratories (HBS Case Classrooms / Research Centers) */
+        .facilities-section {
+            background-color: var(--bg-subtle);
+        }
+
+        .facility-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+        }
+
+        .facility-item {
+            background-color: #ffffff;
+            border: 1px solid var(--border-light);
+            display: flex;
+            flex-direction: column;
+            transition: var(--trans-smooth);
+            position: relative;
+        }
+
+        .facility-item:hover {
+            border-color: var(--primary-navy);
+            box-shadow: 0 10px 25px rgba(14, 30, 56, 0.06);
+            transform: translateY(-3px);
+        }
+
+        .facility-type-tag {
+            font-family: var(--font-display);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-crimson);
+            padding: 1.2rem 1.6rem 0.4rem;
+        }
+
+        .facility-content {
+            padding: 0 1.6rem 1.8rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .facility-title {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 0.8rem;
+            line-height: 1.35;
+        }
+
+        .facility-summary {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+            flex-grow: 1;
+            margin-bottom: 1.2rem;
+        }
+
+        .facility-footer {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border-top: 1px solid var(--border-light);
+            padding-top: 0.8rem;
+        }
+
+        /* 7. Curriculum & Academic Pillars Tabs */
+        .curriculum-module {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            margin-top: 2rem;
+        }
+
+        .academic-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border-light);
+            background-color: var(--bg-ivory);
+        }
+
+        .academic-tab-btn {
+            background: none;
+            border: none;
+            border-right: 1px solid var(--border-light);
+            padding: 1.2rem 2rem;
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--trans-smooth);
+            text-align: left;
+        }
+
+        .academic-tab-btn:hover {
+            color: var(--primary-navy);
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .academic-tab-btn.active {
+            color: var(--accent-crimson);
+            background-color: #ffffff;
+            border-top: 3px solid var(--accent-crimson);
+            margin-top: -1px;
+        }
+
+        .tab-panel {
+            padding: 3rem;
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+            animation: fadeInTab 0.3s ease;
+        }
+
+        .tab-panel h4 {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+
+        .tab-panel p {
+            font-size: 1rem;
+            color: var(--text-body);
+            line-height: 1.8;
+            max-width: 900px;
+        }
+
+        @keyframes fadeInTab {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 8. Official Academic Footer */
+        .academic-footer {
+            background-color: var(--primary-navy);
+            color: #c9d3e0;
+            padding: 5rem 0 2rem;
+            border-top: 6px solid var(--accent-crimson);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 3.5rem;
+            padding-bottom: 3.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .footer-heading {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 1.4rem;
+            position: relative;
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: #a7b5c8;
+            margin-bottom: 1rem;
+        }
+
+        .footer-contact-list {
+            list-style: none;
+            font-size: 0.88rem;
+        }
+
+        .footer-contact-list li {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .footer-contact-list .term {
+            width: 95px;
+            color: var(--accent-gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.78rem;
+            letter-spacing: 0.8px;
+            flex-shrink: 0;
+        }
+
+        .sub-footer {
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #7b8d9f;
+        }
+
+        .sub-footer a {
+            color: #a7b5c8;
+            text-decoration: none;
+            margin-left: 1.2rem;
+        }
+
+        .sub-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .overview-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .facility-list {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .academic-topbar {
+                display: none;
+            }
+            .main-nav {
+                display: none; /* Mobile Menu Fallback */
+            }
+            .hero-heading {
+                font-size: 2.2rem;
+            }
+            .facility-list {
+                grid-template-columns: 1fr;
+            }
+            .academic-tabs {
+                flex-direction: column;
+            }
+            .academic-tab-btn {
+                border-right: none;
+                border-bottom: 1px solid var(--border-light);
+            }
+            .sub-footer {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Academic Utility Header Bar -->
+    <aside class="academic-topbar">
+        <div class="container">
+            <div>
+                <span>Tzu Chi University · College of Management & Social Sciences</span>
+            </div>
+            <div>
+                <a href="#overview">About the Department</a>
+                <a href="#academics">Curriculum</a>
+                <a href="#laboratories">Facilities</a>
+                <a href="#administration">Administration</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Prestigious Header -->
+    <header class="site-header">
+        <div class="container">
+            <a href="#" class="univ-identity">
+                <span class="univ-title">Tzu Chi University</span>
+                <span class="dept-title">Department of Business Management</span>
+                <span class="dept-subtitle">慈濟大學 經營管理學系</span>
+            </a>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="#overview" class="active">Overview</a></li>
+                    <li><a href="#pillars">Tenets</a></li>
+                    <li><a href="#laboratories">Laboratories</a></li>
+                    <li><a href="#academics">Education</a></li>
+                    <li><a href="#administration">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Scholarly Hero Banner -->
+    <section class="scholarly-hero">
+        <div class="container">
+            <div class="hero-inner">
+                <span class="hero-rubric">Academic Excellence & Ethical Stewardship</span>
+                <h1 class="hero-heading">Cultivating Strategic Thinkers and Humanitarian Leaders.</h1>
+                <p class="hero-lead">
+                    融合嚴謹商管學理、哈佛式個案思辨與新零售智慧實踐，致力於為動態全球經貿體系培育兼備專業決策力與崇高社會責任的領袖人才。
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#laboratories" class="btn-academic btn-crimson">Explore Research Facilities</a>
+                    <a href="#overview" class="btn-academic btn-ghost-light">Departmental Profile</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main>
+
+        <!-- Section 1: Department Overview & Core Mission -->
+        <section class="academic-section" id="overview">
+            <div class="container">
+                <div class="section-pretitle">Mission & Institutional Foundations</div>
+                <h2 class="section-title-large">深耕學術理路，立足在地與全球經貿前沿</h2>
+                <div class="section-divider"></div>
+
+                <div class="overview-grid">
+                    <div class="mission-prose">
+                        <p>
+                            慈濟大學經營管理學系植根於頂尖商學教育精神，緊密鏈結當代組織營運、數據驅動決策與新零售科技趨勢。學系以全方位管理知識體系為根基，強調跨學門的知識整合與批判思維的嚴謹淬鍊。
+                        </p>
+                        
+                        <div class="mission-quote">
+                            "Management is, above all, a practice where art, science, and ethics meet."<br>
+                            —— 在追求企業效能與成長的同時，堅守商業倫理、永續價值與人文關懷的至高標準。
+                        </div>
+
+                        <p>
+                            我們透過階梯式個案研討、模擬經貿談判場域與沉浸式商業實驗室，建立結合理論深度與實踐廣度的卓越培育生態，引導學子從花蓮出發，具備馳騁國際經貿舞台的廣博視野。
+                        </p>
+                    </div>
+
+                    <!-- Academic Tenets / Core Capabilities -->
+                    <aside class="tenets-column" id="pillars">
+                        <h3 class="tenets-heading">Core Academic Tenets</h3>
+                        
+                        <div class="tenet-item">
+                            <span class="tenet-index">I. ETHICAL STEWARDSHIP</span>
+                            <div class="tenet-title">企業倫理與人文涵養</div>
+                            <div class="tenet-desc">恪守職場誠信與社會永續責任，奠定厚實的人文價值底蘊。</div>
+                        </div>
+
+                        <div class="tenet-item">
+                            <span class="tenet-index">II. STRATEGIC INQUIRY</span>
+                            <div class="tenet-title">創意思考與決策分析</div>
+                            <div class="tenet-desc">以嚴謹邏輯駕馭商業數據與前瞻管理架構，解決複雜經營課題。</div>
+                        </div>
+
+                        <div class="tenet-item">
+                            <span class="tenet-index">III. COLLABORATIVE SYNERGY</span>
+                            <div class="tenet-title">組織整合與團隊共榮</div>
+                            <div class="tenet-desc">鍛鍊高階溝通、人際協調與跨領域動態領導專長。</div>
+                        </div>
+
+                        <div class="tenet-item">
+                            <span class="tenet-index">IV. GLOBAL PERSPECTIVE</span>
+                            <div class="tenet-title">跨文化適應與國際視野</div>
+                            <div class="tenet-desc">掌握全球地緣經貿動態，拓展流暢的跨文化經貿溝通實力。</div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Specialized Laboratories & Simulation Facilities -->
+        <section class="academic-section facilities-section" id="laboratories">
+            <div class="container">
+                <div class="section-pretitle">Laboratories & Clinical Practice Centers</div>
+                <h2 class="section-title-large">特色專業實驗室與個案研討場域</h2>
+                <div class="section-divider"></div>
+
+                <div class="facility-list">
+                    <!-- Facility 1 -->
+                    <article class="facility-item">
+                        <div class="facility-type-tag">Instructional Lab · 01</div>
+                        <div class="facility-content">
+                            <h3 class="facility-title">個案教學研討室</h3>
+                            <p class="facility-summary">
+                                遵循常春藤名校頂尖個案教學法設計之沉浸階梯空間。以雙向研習與觀點辯證為核心，引導學員在動態情境中掌握經營決策精髓。
+                            </p>
+                            <div class="facility-footer">
+                                <span>Flipped Classroom Model &rarr;</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Facility 2 -->
+                    <article class="facility-item">
+                        <div class="facility-type-tag">Operations Center · 02</div>
+                        <div class="facility-content">
+                            <h3 class="facility-title">經營實習教室 (知足咖啡館)</h3>
+                            <p class="facility-summary">
+                                行銷流通與外場營運的高規格實戰平台。建置專業餐飲服務與零售管理設備，供學員實地參與定價、庫存及客戶關係運營。
+                            </p>
+                            <div class="facility-footer">
+                                <span>Service & Operations Lab &rarr;</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Facility 3 -->
+                    <article class="facility-item">
+                        <div class="facility-type-tag">Diplomacy & Commerce · 03</div>
+                        <div class="facility-content">
+                            <h3 class="facility-title">國際商務教室</h3>
+                            <p class="facility-summary">
+                                專為全球貿易模擬、多邊商業談判與跨國企業戰略研析打造的高階學術研討空間，兼具安靜舒適與國際專業質感。
+                            </p>
+                            <div class="facility-footer">
+                                <span>Global Trade & Negotiation &rarr;</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Facility 4 -->
+                    <article class="facility-item">
+                        <div class="facility-type-tag">Executive Media · 04</div>
+                        <div class="facility-content">
+                            <h3 class="facility-title">簡報與溝通教室</h3>
+                            <p class="facility-summary">
+                                搭載高畫質投影與多軌音訊系統，專門鍛鍊管理顧問提案、商務演說及執行長級（C-Suite）高階溝通協調技法。
+                            </p>
+                            <div class="facility-footer">
+                                <span>Corporate Communications &rarr;</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Facility 5 -->
+                    <article class="facility-item">
+                        <div class="facility-type-tag">Future Commerce · 05</div>
+                        <div class="facility-content">
+                            <h3 class="facility-title">智慧零售科技商店</h3>
+                            <p class="facility-summary">
+                                建構新零售虛擬與實體整合空間，引進無人商店技術思維與數據化庫存架構，引領學員提早掌握零售業數位轉型趨勢。
+                            </p>
+                            <div class="facility-footer">
+                                <span>Smart Retail & Analytics &rarr;</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Facility 6 / Academic Synthesis -->
+                    <article class="facility-item" style="background: var(--primary-navy); border-color: var(--primary-navy);">
+                        <div class="facility-type-tag" style="color: var(--accent-gold);">Academic Ecosystem · 06</div>
+                        <div class="facility-content" style="color: #ffffff;">
+                            <h3 class="facility-title" style="color: #ffffff;">全方位的學研生態</h3>
+                            <p class="facility-summary" style="color: #c0cbe0;">
+                                五大專業實習空間彼此串接，構建出兼具「個案思辨」、「國際談判」、「實務營運」與「前瞻零售」的完整實踐閉環。
+                            </p>
+                            <div class="facility-footer" style="color: var(--accent-gold); border-color: rgba(255,255,255,0.15);">
+                                <span>Integrated Ecosystem &rarr;</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Educational Methodology & Research Programs -->
+        <section class="academic-section" id="academics">
+            <div class="container">
+                <div class="section-pretitle">Pedagogical Framework</div>
+                <h2 class="section-title-large">教學途徑與學術實踐</h2>
+                <div class="section-divider"></div>
+
+                <div class="curriculum-module">
+                    <div class="academic-tabs">
+                        <button class="academic-tab-btn active" onclick="showAcademicTab(event, 'tab-cases')">I. 翻轉個案教學法</button>
+                        <button class="academic-tab-btn" onclick="showAcademicTab(event, 'tab-community')">II. 實習與在地社會責任</button>
+                        <button class="academic-tab-btn" onclick="showAcademicTab(event, 'tab-alumni')">III. 畢業發展與產業鏈結</button>
+                    </div>
+
+                    <div id="tab-cases" class="tab-panel active">
+                        <h4>以高階個案為本的批判思辨教學 (Case-Method Pedagogy)</h4>
+                        <p>
+                            學系全面推行主動式翻轉教學，摒除傳統單向講授模式。課堂透過真實產業決策情境之深度剖析，激盪不同思維維度，培養學生在資訊未全與高度不確定性環境下，具備精準裁量與策略推演之能力。
+                        </p>
+                    </div>
+
+                    <div id="tab-community" class="tab-panel">
+                        <h4>深耕地方永續與產學專案整合 (Experiential Learning & CSR)</h4>
+                        <p>
+                            強調行動實踐（Action Learning），學生在學期間即深入在地產業、非營利事業與知名企業體系進行調研與實務進修。結合社會創新與永續發展（ESG）思維，在實際商業課題中創造真確影響力。
+                        </p>
+                    </div>
+
+                    <div id="tab-alumni" class="tab-panel">
+                        <h4>開拓多元產業軌道與專業領導階梯 (Professional Trajectories)</h4>
+                        <p>
+                            學系培育成果廣泛受到全球及國內一流企業重視。校友廣布於策略企劃、人資整合、流通供應鏈、數位行銷、跨國經貿開發及創新創業等前線樞紐，展現高度專業倫理與卓越領導風範。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Section 4: Academic Administration & Contact Footer -->
+    <footer class="academic-footer" id="administration">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <!-- Institutional Identity -->
+                <div>
+                    <h5 class="footer-heading">Department of Business Management</h5>
+                    <p class="footer-text">
+                        慈濟大學經營管理學系<br>
+                        致力於商業倫理、數位營運實踐與全球經貿思維的高等人文學府。
+                    </p>
+                    <p class="footer-text" style="font-size: 0.82rem; color: #8295ab;">
+                        Mailing Address: No. 67, Jieren St., Hualien City, Hualien County 97005, Taiwan (R.O.C.)
+                    </p>
+                </div>
+
+                <!-- Office of Academic Services -->
+                <div>
+                    <h5 class="footer-heading">Administrative Office</h5>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <span class="term">Campus:</span>
+                            <span>花蓮市介仁校區 (介仁街67號)</span>
+                        </li>
+                        <li>
+                            <span class="term">Telephone:</span>
+                            <span>+886-3-857-2677 Ext. 31682</span>
+                        </li>
+                        <li>
+                            <span class="term">Inquiries:</span>
+                            <span>ss62@gms.tcu.edu.tw</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Privacy & Regulatory Officer -->
+                <div>
+                    <h5 class="footer-heading">Compliance & Privacy</h5>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <span class="term">Officer:</span>
+                            <span>林珍如 系主任 (Director)</span>
+                        </li>
+                        <li>
+                            <span class="term">Direct Tel:</span>
+                            <span>+886-3-857-2677 Ext. 33126</span>
+                        </li>
+                        <li>
+                            <span class="term">Email:</span>
+                            <span>lih5374@gms.tcu.edu.tw</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Legal Bottomline -->
+            <div class="sub-footer">
+                <div>
+                    &copy; 2026 Tzu Chi University. Department of Business Management. All Rights Reserved.
+                </div>
+                <div>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Institutional Research</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Internal JavaScript for Interactivity -->
+    <script>
+        // Academic Tab Navigation Logic
+        function showAcademicTab(event, panelId) {
+            const panels = document.querySelectorAll('.tab-panel');
+            panels.forEach(panel => panel.classList.remove('active'));
+
+            const buttons = document.querySelectorAll('.academic-tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            const targetPanel = document.getElementById(panelId);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+            }
+            event.currentTarget.classList.add('active');
+        }
+
+        // Header Shadow Behavior on Scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.site-header');
+            if (window.scrollY > 40) {
+                header.style.boxShadow = '0 4px 20px rgba(7, 16, 30, 0.08)';
+            } else {
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.04)';
+            }
+        });
+    </script>
+</body>
+</html>
