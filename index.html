@@ -162,27 +162,52 @@
             background-color: var(--accent-crimson);
         }
 
-        /* 3. Hero Section (結合 graph/G001.jpg 與防吃字漸層遮罩) */
+        /* 3. Hero Carousel / Slider Section (graph/G02.jpg, G03.jpg, G04.jpg) */
         .scholarly-hero {
             position: relative;
-            padding: 6.5rem 0 5.5rem;
+            padding: 6.5rem 0 6.5rem;
             border-bottom: 1px solid var(--border-light);
             color: var(--text-light);
             background-color: var(--primary-navy);
-            
-            /* 關鍵：左側加深確保文字對比度，右側通透展示人物討論模型場景 */
-            background-image: 
-                linear-gradient(
-                    to right, 
-                    rgba(7, 16, 30, 0.98) 0%, 
-                    rgba(14, 30, 56, 0.92) 40%, 
-                    rgba(14, 30, 56, 0.55) 70%, 
-                    rgba(14, 30, 56, 0.25) 100%
-                ),
-                url('graph/PXL_20261111_050007027.jpg');
-            background-position: center right;
+            overflow: hidden;
+        }
+
+        /* 輪播背景圖層 */
+        .hero-carousel-slides {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
             background-size: cover;
+            background-position: center center;
             background-repeat: no-repeat;
+            opacity: 0;
+            transform: scale(1.03);
+            transition: opacity 1s ease-in-out, transform 6s ease-out;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* 防吃字漸層遮罩（左深右透） */
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(
+                to right,
+                rgba(7, 16, 30, 0.96) 0%,
+                rgba(14, 30, 56, 0.88) 40%,
+                rgba(14, 30, 56, 0.50) 70%,
+                rgba(14, 30, 56, 0.22) 100%
+            );
+            pointer-events: none;
         }
 
         .hero-inner {
@@ -268,6 +293,74 @@
             border-color: #ffffff;
             background: rgba(255, 255, 255, 0.15);
             transform: translateY(-2px);
+        }
+
+        /* 輪播左右切換按鈕 */
+        .hero-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 3;
+            width: 44px;
+            height: 44px;
+            background: rgba(7, 16, 30, 0.5);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            backdrop-filter: blur(4px);
+            font-size: 1.4rem;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--trans-smooth);
+        }
+
+        .hero-nav-btn:hover {
+            background: var(--accent-crimson);
+            border-color: var(--accent-crimson);
+        }
+
+        .hero-nav-btn.prev {
+            left: 1.5rem;
+        }
+
+        .hero-nav-btn.next {
+            right: 1.5rem;
+        }
+
+        /* 輪播底部指示點 */
+        .hero-indicators {
+            position: absolute;
+            bottom: 1.8rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            gap: 0.7rem;
+            align-items: center;
+        }
+
+        .hero-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.75);
+            background: rgba(255, 255, 255, 0.25);
+            cursor: pointer;
+            padding: 0;
+            transition: var(--trans-smooth);
+        }
+
+        .hero-dot:hover {
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .hero-dot.active {
+            width: 28px;
+            border-radius: 5px;
+            background: var(--accent-gold);
+            border-color: var(--accent-gold);
         }
 
         /* Common Container */
@@ -625,8 +718,10 @@
                 grid-template-columns: 1fr;
                 gap: 2.5rem;
             }
-            .scholarly-hero {
-                background-position: 70% center;
+            .hero-nav-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 1.15rem;
             }
         }
 
@@ -641,15 +736,22 @@
                 font-size: 2.2rem;
             }
             .scholarly-hero {
-                padding: 4.5rem 0 4rem;
-                /* 行動端加重漸層深度以保護小螢幕閱讀 */
-                background-image: 
-                    linear-gradient(
-                        to bottom, 
-                        rgba(7, 16, 30, 0.95) 0%, 
-                        rgba(14, 30, 56, 0.88) 100%
-                    ),
-                    url('graph/G001.jpg');
+                padding: 4.5rem 0 5rem;
+            }
+            /* 行動端加重漸層深度以保護小螢幕閱讀 */
+            .hero-overlay {
+                background: linear-gradient(
+                    to bottom,
+                    rgba(7, 16, 30, 0.90) 0%,
+                    rgba(14, 30, 56, 0.82) 100%
+                );
+            }
+            .hero-cta-group {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .hero-nav-btn {
+                display: none;
             }
             .facility-list {
                 grid-template-columns: 1fr;
@@ -706,8 +808,19 @@
         </div>
     </header>
 
-    <!-- Scholarly Hero Banner (含 graph/G001.jpg 橫幅背景) -->
-    <section class="scholarly-hero">
+    <!-- Scholarly Hero Carousel / Slider Banner (graph/G02.jpg, G03.jpg, G04.jpg) -->
+    <section class="scholarly-hero" id="heroCarousel" aria-label="系所主視覺輪播橫幅">
+        <!-- 輪播背景圖片層 -->
+        <div class="hero-carousel-slides">
+            <div class="hero-slide active" style="background-image: url('graph/G02.jpg');" role="img" aria-label="慈濟大學經營管理學系辦公室"></div>
+            <div class="hero-slide" style="background-image: url('graph/G03.jpg');" role="img" aria-label="慈濟大學校園景觀"></div>
+            <div class="hero-slide" style="background-image: url('graph/G04.jpg');" role="img" aria-label="經營管理學系課堂教學實況"></div>
+        </div>
+
+        <!-- 防吃字漸層遮罩 -->
+        <div class="hero-overlay"></div>
+
+        <!-- 前景標題與按鈕 -->
         <div class="container">
             <div class="hero-inner">
                 <span class="hero-rubric">Academic Excellence & Ethical Stewardship</span>
@@ -720,6 +833,17 @@
                     <a href="#overview" class="btn-academic btn-ghost-light">Departmental Profile</a>
                 </div>
             </div>
+        </div>
+
+        <!-- 左右切換按鈕 -->
+        <button class="hero-nav-btn prev" onclick="moveHeroSlide(-1)" aria-label="上一張照片">&#8249;</button>
+        <button class="hero-nav-btn next" onclick="moveHeroSlide(1)" aria-label="下一張照片">&#8250;</button>
+
+        <!-- 底部指示點 -->
+        <div class="hero-indicators" role="tablist" aria-label="輪播進度指示">
+            <button class="hero-dot active" onclick="goToHeroSlide(0)" aria-label="切換至第 1 張照片"></button>
+            <button class="hero-dot" onclick="goToHeroSlide(1)" aria-label="切換至第 2 張照片"></button>
+            <button class="hero-dot" onclick="goToHeroSlide(2)" aria-label="切換至第 3 張照片"></button>
         </div>
     </section>
 
@@ -989,6 +1113,51 @@
 
     <!-- Internal JavaScript for Interactivity -->
     <script>
+        // Hero Carousel / Slider Logic
+        let currentHeroIndex = 0;
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        const heroDots = document.querySelectorAll('.hero-dot');
+        const heroSection = document.getElementById('heroCarousel');
+        let heroAutoPlayTimer;
+
+        function updateHeroCarousel(index) {
+            currentHeroIndex = (index + heroSlides.length) % heroSlides.length;
+
+            heroSlides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === currentHeroIndex);
+            });
+
+            heroDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentHeroIndex);
+            });
+        }
+
+        function moveHeroSlide(step) {
+            updateHeroCarousel(currentHeroIndex + step);
+            resetHeroAutoPlay();
+        }
+
+        function goToHeroSlide(index) {
+            updateHeroCarousel(index);
+            resetHeroAutoPlay();
+        }
+
+        function startHeroAutoPlay() {
+            heroAutoPlayTimer = setInterval(() => {
+                updateHeroCarousel(currentHeroIndex + 1);
+            }, 5000);
+        }
+
+        function resetHeroAutoPlay() {
+            clearInterval(heroAutoPlayTimer);
+            startHeroAutoPlay();
+        }
+
+        // 啟動自動輪播，滑鼠移入橫幅時暫停
+        startHeroAutoPlay();
+        heroSection.addEventListener('mouseenter', () => clearInterval(heroAutoPlayTimer));
+        heroSection.addEventListener('mouseleave', startHeroAutoPlay);
+
         // Academic Tab Navigation Logic
         function showAcademicTab(event, panelId) {
             const panels = document.querySelectorAll('.tab-panel');
