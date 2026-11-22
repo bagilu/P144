@@ -1,0 +1,657 @@
+
+        :root {
+            /* Academic Ivy Palette */
+            --p144-navy: #0e1e38;      /* 常春藤深海軍藍 */
+            --p144-dark: #07101e;
+            --p144-burgundy: #8b1d2c;    /* 經典酒紅 */
+            --p144-gold: #c29b38;       /* 學術榮譽金 */
+            
+            --p144-background: #fcfbf9;          /* 高級學術紙張色 */
+            --p144-bg-card: #ffffff;
+            --p144-bg-subtle: #f4f2ee;
+            
+            --p144-border-light: #e4dfd5;
+            --p144-border-dark: #1b2838;
+            
+            --p144-text-heading: #121c2d;
+            --p144-text: #2b3542;
+            --p144-text-muted: #5e6d82;
+            --p144-text-light: #f7f9fa;
+
+            --p144-font-display: 'Cinzel', 'Playfair Display', 'Noto Serif TC', serif;
+            --p144-font-serif: 'Merriweather', 'Noto Serif TC', Georgia, serif;
+            --p144-font-sans: 'Inter', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+            
+            --p144-trans-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--p144-font-sans);
+            background-color: var(--p144-background);
+            color: var(--p144-text);
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 1. Academic Meta / Top Utility Bar */
+        .p144-academic-topbar {
+            background-color: var(--p144-dark);
+            color: #b0bec5;
+            font-size: 0.76rem;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .p144-academic-topbar .p144-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .p144-academic-topbar a {
+            color: #d1d5db;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: var(--p144-trans-smooth);
+        }
+
+        .p144-academic-topbar a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        /* 2. Primary Navigation */
+        .p144-site-header {
+            background-color: #ffffff;
+            border-bottom: 2px solid var(--p144-burgundy);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .p144-site-header .p144-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.4rem 2rem;
+        }
+
+        .p144-univ-identity {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+
+        .p144-univ-title {
+            font-family: var(--p144-font-display);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            color: var(--p144-burgundy);
+            text-transform: uppercase;
+        }
+
+        .p144-dept-title {
+            font-family: var(--p144-font-display);
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: var(--p144-navy);
+            letter-spacing: -0.2px;
+            margin-top: 2px;
+        }
+
+        .p144-dept-subtitle {
+            font-size: 0.8rem;
+            color: var(--p144-text-muted);
+            letter-spacing: 0.5px;
+            font-family: var(--p144-font-sans);
+        }
+
+        .p144-main-nav {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .p144-main-nav a {
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--p144-navy);
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 4px;
+            transition: var(--p144-trans-smooth);
+        }
+
+        .p144-main-nav a:hover, .p144-main-nav a.p144-active {
+            color: var(--p144-burgundy);
+        }
+
+        .p144-main-nav a.p144-active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--p144-burgundy);
+        }
+
+        /* 3. Hero Section (結合 graph/G001.jpg 與防吃字漸層遮罩) */
+        .p144-scholarly-hero {
+            position: relative;
+            padding: 6.5rem 0 5.5rem;
+            border-bottom: 1px solid var(--p144-border-light);
+            color: var(--p144-text-light);
+            background-color: var(--p144-navy);
+            
+            /* 關鍵：左側加深確保文字對比度，右側通透展示人物討論模型場景 */
+            background-image: 
+                linear-gradient(
+                    to right, 
+                    rgba(7, 16, 30, 0.98) 0%, 
+                    rgba(14, 30, 56, 0.92) 40%, 
+                    rgba(14, 30, 56, 0.55) 70%, 
+                    rgba(14, 30, 56, 0.25) 100%
+                ),
+                linear-gradient(135deg, #183451, #0e1e38);
+            background-position: center right;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .p144-hero-inner {
+            max-width: 820px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .p144-hero-rubric {
+            display: inline-block;
+            font-family: var(--p144-font-display);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--p144-gold);
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid var(--p144-gold);
+            padding-bottom: 4px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .p144-hero-heading {
+            font-family: var(--p144-font-serif);
+            font-size: 3.1rem;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 1.6rem;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .p144-hero-lead {
+            font-size: 1.2rem;
+            line-height: 1.85;
+            color: #e5edf5;
+            font-weight: 400;
+            margin-bottom: 2.2rem;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        .p144-hero-cta-group {
+            display: flex;
+            gap: 1.2rem;
+        }
+
+        .p144-btn-academic {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.88rem;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 0.85rem 2rem;
+            border-radius: 0px;
+            text-decoration: none;
+            transition: var(--p144-trans-smooth);
+            cursor: pointer;
+        }
+
+        .p144-btn-crimson {
+            background-color: var(--p144-burgundy);
+            color: #ffffff;
+            border: 1px solid var(--p144-burgundy);
+            box-shadow: 0 4px 12px rgba(139, 29, 44, 0.35);
+        }
+
+        .p144-btn-crimson:hover {
+            background-color: #701522;
+            border-color: #701522;
+            transform: translateY(-2px);
+        }
+
+        .p144-btn-ghost-light {
+            background: rgba(7, 16, 30, 0.4);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(4px);
+        }
+
+        .p144-btn-ghost-light:hover {
+            border-color: #ffffff;
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Common Container */
+        .p144-container {
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* 4. Section Structure */
+        .p144-academic-section {
+            padding: 5.5rem 0;
+            border-bottom: 1px solid var(--p144-border-light);
+        }
+
+        .p144-section-pretitle {
+            font-family: var(--p144-font-display);
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--p144-burgundy);
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+        }
+
+        .p144-section-title-large {
+            font-family: var(--p144-font-serif);
+            font-size: 2.3rem;
+            font-weight: 700;
+            color: var(--p144-navy);
+            margin-bottom: 1rem;
+            letter-spacing: -0.3px;
+        }
+
+        .p144-section-divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--p144-navy);
+            margin-bottom: 3.2rem;
+        }
+
+        /* 5. Mission & Pillars */
+        .p144-overview-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .p144-mission-prose {
+            font-size: 1.05rem;
+            color: var(--p144-text);
+            line-height: 1.85;
+        }
+
+        .p144-mission-prose p {
+            margin-bottom: 1.5rem;
+        }
+
+        .p144-mission-quote {
+            border-left: 3px solid var(--p144-burgundy);
+            padding-left: 1.6rem;
+            font-family: var(--p144-font-serif);
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--p144-navy);
+            margin: 2rem 0;
+            background: var(--p144-bg-subtle);
+            padding: 1.5rem 1.8rem;
+        }
+
+        /* Academic Tenets Column */
+        .p144-tenets-column {
+            background-color: var(--p144-bg-card);
+            border: 1px solid var(--p144-border-light);
+            padding: 2.2rem;
+            border-top: 4px solid var(--p144-navy);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        .p144-tenets-heading {
+            font-family: var(--p144-font-display);
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: var(--p144-navy);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid var(--p144-border-light);
+            text-transform: uppercase;
+        }
+
+        .p144-tenet-item {
+            margin-bottom: 1.6rem;
+            padding-bottom: 1.4rem;
+            border-bottom: 1px dashed var(--p144-border-light);
+        }
+
+        .p144-tenet-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .p144-tenet-index {
+            font-family: var(--p144-font-display);
+            font-size: 0.8rem;
+            color: var(--p144-gold);
+            font-weight: 700;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .p144-tenet-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--p144-navy);
+            margin-bottom: 0.35rem;
+        }
+
+        .p144-tenet-desc {
+            font-size: 0.88rem;
+            color: var(--p144-text-muted);
+            line-height: 1.55;
+        }
+
+        /* 6. Facilities & Laboratories */
+        .p144-facilities-section {
+            background-color: var(--p144-bg-subtle);
+        }
+
+        .p144-facility-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+        }
+
+        .p144-facility-item {
+            background-color: #ffffff;
+            border: 1px solid var(--p144-border-light);
+            display: flex;
+            flex-direction: column;
+            transition: var(--p144-trans-smooth);
+            position: relative;
+        }
+
+        .p144-facility-item:hover {
+            border-color: var(--p144-navy);
+            box-shadow: 0 10px 25px rgba(14, 30, 56, 0.06);
+            transform: translateY(-3px);
+        }
+
+        .p144-facility-type-tag {
+            font-family: var(--p144-font-display);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--p144-burgundy);
+            padding: 1.2rem 1.6rem 0.4rem;
+        }
+
+        .p144-facility-content {
+            padding: 0 1.6rem 1.8rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .p144-facility-title {
+            font-family: var(--p144-font-serif);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--p144-navy);
+            margin-bottom: 0.8rem;
+            line-height: 1.35;
+        }
+
+        .p144-facility-summary {
+            font-size: 0.92rem;
+            color: var(--p144-text-muted);
+            line-height: 1.65;
+            flex-grow: 1;
+            margin-bottom: 1.2rem;
+        }
+
+        .p144-facility-footer {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--p144-navy);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border-top: 1px solid var(--p144-border-light);
+            padding-top: 0.8rem;
+        }
+
+        /* 7. Curriculum & Academic Tabs */
+        .p144-curriculum-module {
+            background: #ffffff;
+            border: 1px solid var(--p144-border-light);
+            margin-top: 2rem;
+        }
+
+        .p144-academic-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--p144-border-light);
+            background-color: var(--p144-background);
+        }
+
+        .p144-academic-tab-btn {
+            background: none;
+            border: none;
+            border-right: 1px solid var(--p144-border-light);
+            padding: 1.2rem 2rem;
+            font-family: var(--p144-font-display);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--p144-text-muted);
+            cursor: pointer;
+            transition: var(--p144-trans-smooth);
+            text-align: left;
+        }
+
+        .p144-academic-tab-btn:hover {
+            color: var(--p144-navy);
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .p144-academic-tab-btn.p144-active {
+            color: var(--p144-burgundy);
+            background-color: #ffffff;
+            border-top: 3px solid var(--p144-burgundy);
+            margin-top: -1px;
+        }
+
+        .p144-tab-panel {
+            padding: 3rem;
+            display: none;
+        }
+
+        .p144-tab-panel.p144-active {
+            display: block;
+            animation: fadeInTab 0.3s ease;
+        }
+
+        .p144-tab-panel h4 {
+            font-family: var(--p144-font-serif);
+            font-size: 1.4rem;
+            color: var(--p144-navy);
+            margin-bottom: 1rem;
+        }
+
+        .p144-tab-panel p {
+            font-size: 1rem;
+            color: var(--p144-text);
+            line-height: 1.8;
+            max-width: 900px;
+        }
+
+        @keyframes fadeInTab {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 8. Official Academic Footer */
+        .p144-academic-footer {
+            background-color: var(--p144-navy);
+            color: #c9d3e0;
+            padding: 5rem 0 2rem;
+            border-top: 6px solid var(--p144-burgundy);
+        }
+
+        .p144-footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 3.5rem;
+            padding-bottom: 3.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .p144-footer-heading {
+            font-family: var(--p144-font-display);
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 1.4rem;
+            position: relative;
+        }
+
+        .p144-footer-text {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: #a7b5c8;
+            margin-bottom: 1rem;
+        }
+
+        .p144-footer-contact-list {
+            list-style: none;
+            font-size: 0.88rem;
+        }
+
+        .p144-footer-contact-list li {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .p144-footer-contact-list .p144-term {
+            width: 95px;
+            color: var(--p144-gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.78rem;
+            letter-spacing: 0.8px;
+            flex-shrink: 0;
+        }
+
+        .p144-sub-footer {
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #7b8d9f;
+        }
+
+        .p144-sub-footer a {
+            color: #a7b5c8;
+            text-decoration: none;
+            margin-left: 1.2rem;
+        }
+
+        .p144-sub-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .p144-overview-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .p144-facility-list {
+                grid-template-columns: 1fr 1fr;
+            }
+            .p144-footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .p144-scholarly-hero {
+                background-position: 70% center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .p144-academic-topbar {
+                display: none;
+            }
+            .p144-main-nav {
+                display: none;
+            }
+            .p144-hero-heading {
+                font-size: 2.2rem;
+            }
+            .p144-scholarly-hero {
+                padding: 4.5rem 0 4rem;
+                /* 行動端加重漸層深度以保護小螢幕閱讀 */
+                background-image: 
+                    linear-gradient(
+                        to bottom, 
+                        rgba(7, 16, 30, 0.95) 0%, 
+                        rgba(14, 30, 56, 0.88) 100%
+                    ),
+                    linear-gradient(135deg, #183451, #0e1e38);
+            }
+            .p144-facility-list {
+                grid-template-columns: 1fr;
+            }
+            .p144-academic-tabs {
+                flex-direction: column;
+            }
+            .p144-academic-tab-btn {
+                border-right: none;
+                border-bottom: 1px solid var(--p144-border-light);
+            }
+            .p144-sub-footer {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    
