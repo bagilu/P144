@@ -402,3 +402,42 @@ html{scroll-padding-top:115px}
 .p144-work-tags span{padding:.16rem .5rem;background:#f2efe8;color:#34435a;font-size:.75rem}
 @media(max-width:760px){.p144-learning-hero .p144-container{min-height:230px}.p144-learning-hero .p144-container:after{right:0;width:68%;background-size:100% 100%,100% 100%,auto 145%}.p144-learning-hero-copy{width:min(560px,72%)}.p144-work-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.p144-work-photo,.p144-work-gallery img,.p144-work-cover{height:180px;min-height:180px}}
 @media(max-width:540px){.p144-learning-hero .p144-container{min-height:220px}.p144-learning-hero .p144-container:after{width:76%;opacity:.65;background-size:100% 100%,100% 100%,auto 125%}.p144-learning-hero-copy{width:100%;max-width:360px}.p144-learning-hero h1{font-size:1.85rem}.p144-work-grid{grid-template-columns:1fr}.p144-work-photo,.p144-work-gallery img,.p144-work-cover{height:220px;min-height:220px}.p144-academic-tab-btn{padding:.75rem .85rem}}
+
+
+/* P43 international engagement */
+.p144-international-hero{position:relative;isolation:isolate;overflow:hidden;background:#0e1e38;color:#fff;border-bottom:4px solid var(--p144-gold)}
+.p144-international-hero .p144-container{position:relative;display:flex;align-items:center;min-height:270px}
+.p144-international-hero .p144-container:after{content:"";position:absolute;z-index:0;top:0;right:2rem;width:55%;height:100%;pointer-events:none;background-image:linear-gradient(to right,#0e1e38 0%,rgba(14,30,56,.96) 20%,rgba(14,30,56,.16) 68%,rgba(14,30,56,0) 100%),linear-gradient(to left,#0e1e38 0%,rgba(14,30,56,.82) 5%,rgba(14,30,56,0) 15%),url("../../graph/G18.jpg");background-repeat:no-repeat;background-position:center,center,right center;background-size:100% 100%,100% 100%,auto 175%}
+.p144-international-hero-copy{position:relative;z-index:1;width:min(650px,60%)}
+.p144-international-breadcrumb{font-size:.8rem;color:#d4d9e1;margin:0 0 1.2rem}
+.p144-international-breadcrumb a{color:#f0e5ca;text-decoration:underline;text-underline-offset:3px}
+.p144-international-kicker{margin:0 0 .65rem;color:#e2cb91;font-family:var(--p144-font-display);font-size:.82rem;font-weight:700;letter-spacing:2px}
+.p144-international-hero h1{margin:0 0 .65rem;color:#f7f5ef;font-family:var(--p144-font-serif);font-size:clamp(1.8rem,3vw,2.4rem);line-height:1.4}
+.p144-international-hero-copy>p:last-child{margin:0;color:#dce5ef;font-size:1rem;line-height:1.75;max-width:600px}
+.p144-international-section{background:#f5f3ef}
+.p144-international-notice{padding:1rem 1.15rem;margin:0 0 2rem;border-left:4px solid var(--p144-gold);background:#fff;color:#344258;font-size:.91rem;line-height:1.75}
+.p144-international-intro{max-width:930px;margin-bottom:1.4rem}
+.p144-international-intro>p:last-child{color:var(--p144-text-muted);line-height:1.85}
+.p144-international-jump{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin:1.6rem 0 2.5rem}
+.p144-international-jump a{display:flex;align-items:center;gap:.8rem;padding:1rem 1.1rem;background:#fff;border:1px solid var(--p144-border-light);border-top:3px solid var(--p144-gold);color:var(--p144-navy);font-weight:600;text-decoration:none}
+.p144-international-jump a:hover{border-color:var(--p144-burgundy);text-decoration:underline}
+.p144-international-jump span{font-family:var(--p144-font-display);color:var(--p144-burgundy);font-weight:700}
+.p144-international-pathway{scroll-margin-top:140px;padding:2.1rem 0 2.4rem;border-top:1px solid var(--p144-border-light)}
+.p144-international-heading{display:flex;align-items:center;gap:1rem;margin-bottom:.6rem}
+.p144-international-number{display:grid;place-items:center;width:48px;height:48px;flex:0 0 48px;border-radius:50%;background:var(--p144-navy);color:#fff;font-family:var(--p144-font-display);font-weight:700}
+.p144-international-heading h2{margin:.2rem 0 0;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1.8rem}
+.p144-international-lead{max-width:850px;margin:0 0 1rem;color:var(--p144-text-muted);line-height:1.8}
+.p144-international-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.p144-international-card{padding:1.25rem;background:#fff;border:1px solid var(--p144-border-light);border-top:3px solid var(--p144-gold)}
+.p144-international-card-label{display:inline-block;color:#6d1422;font-size:.78rem;font-weight:700}
+.p144-international-card h3{margin:.4rem 0 .5rem;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1.12rem}
+.p144-international-card p{color:#46556a;font-size:.91rem;line-height:1.8}
+.p144-international-placeholder{margin:1rem 0 0;padding:.85rem 1rem;background:#ebe8e1;color:#344258;font-size:.86rem;line-height:1.7}
+.p144-international-resources{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:1rem;align-items:stretch;margin:2.3rem 0 1.4rem;padding:1.5rem 0;border-top:1px solid var(--p144-border-light)}
+.p144-international-resources>div{padding:.5rem .3rem}
+.p144-international-resources h2{margin:.25rem 0 .5rem;color:var(--p144-navy);font-family:var(--p144-font-serif)}
+.p144-international-resources>div p{color:var(--p144-text-muted);font-size:.9rem}
+.p144-international-resources .p144-link-card{padding:1.2rem;margin:0}
+.p144-international-editor-note{padding-top:1.1rem;border-top:1px solid var(--p144-border-light);color:#40516a;font-size:.84rem;line-height:1.7}
+@media(max-width:760px){.p144-international-hero .p144-container{min-height:240px}.p144-international-hero .p144-container:after{right:0;width:68%;background-size:100% 100%,100% 100%,auto 145%}.p144-international-hero-copy{width:min(600px,76%)}.p144-international-grid{grid-template-columns:1fr}.p144-international-resources{grid-template-columns:1fr 1fr}.p144-international-resources>div{grid-column:1/-1}}
+@media(max-width:540px){.p144-international-hero .p144-container{min-height:230px}.p144-international-hero .p144-container:after{width:78%;opacity:.66;background-size:100% 100%,100% 100%,auto 125%}.p144-international-hero-copy{width:100%;max-width:370px}.p144-international-hero h1{font-size:1.7rem}.p144-international-jump{grid-template-columns:1fr;gap:.5rem;margin:1.2rem 0 2rem}.p144-international-jump a{padding:.75rem .9rem}.p144-international-resources{grid-template-columns:1fr}.p144-international-resources>div{grid-column:auto}}
