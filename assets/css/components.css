@@ -162,3 +162,8 @@ html{scroll-padding-top:115px}
 .p144-history-timeline h3{margin:0 0 .25rem;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1.03rem}
 .p144-history-timeline p{margin:0;color:var(--p144-text-muted);font-size:.9rem;line-height:1.65}
 @media(max-width:768px){.p144-mission-layout{grid-template-columns:1fr;gap:.75rem;margin-top:1rem}.p144-mission-card,.p144-objectives-card{padding:1rem 1.1rem}.p144-objective-list{grid-template-columns:1fr;gap:.1rem}.p144-core-section{margin-top:1.3rem;padding-top:.9rem}.p144-core-heading{display:block}.p144-core-grid{grid-template-columns:1fr 1fr;gap:.55rem}.p144-core-card{min-height:92px;padding:.75rem}.p144-core-card h4{font-size:.86rem}.p144-history-timeline:before{left:75px}.p144-history-timeline article{grid-template-columns:76px minmax(0,1fr);gap:.7rem;padding:.55rem 0 .85rem}.p144-history-timeline article:before{left:70px}.p144-history-timeline article>span{font-size:.82rem}.p144-history-timeline h3{font-size:.95rem}.p144-history-timeline p{font-size:.84rem}}
+
+/* Keep each history description aligned with its event title. */
+.p144-history-timeline article>span{grid-column:1;grid-row:1 / span 2}
+.p144-history-timeline article h3,.p144-history-timeline article p{grid-column:2}
+@media(max-width:768px){.p144-history-timeline article>span{grid-column:1;grid-row:1 / span 2}.p144-history-timeline article h3,.p144-history-timeline article p{grid-column:2}}
