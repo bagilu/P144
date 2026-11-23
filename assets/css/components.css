@@ -299,3 +299,19 @@ html{scroll-padding-top:115px}
 @media(max-width:900px){.p144-roadmap-stage-grid{grid-template-columns:1fr}}
 @media(max-width:768px){.p144-course-hero,.p144-course-hero .p144-container{min-height:230px}.p144-course-hero .p144-container:after{right:1.25rem;width:57%;opacity:.78;background-size:100% 100%,auto 150%}.p144-course-hero-copy{width:68%}.p144-course-hero h1{font-size:1.8rem}.p144-course-section{padding:2.5rem 0 3rem}.p144-course-categories,.p144-course-modules,.p144-credit-grid{grid-template-columns:1fr}.p144-course-category-wide,.p144-credit-card-wide{grid-column:auto}.p144-course-module ul{grid-template-columns:1fr 1fr}.p144-credit-card header{flex-wrap:wrap}}
 @media(max-width:520px){.p144-course-hero-copy{width:100%;padding-right:3rem}.p144-course-hero .p144-container:after{right:1.25rem;width:48%;opacity:.44}.p144-course-section-head h2{font-size:1.6rem}.p144-course-module ul{grid-template-columns:1fr}.p144-credit-total{gap:.6rem}.p144-credit-total strong{font-size:1.65rem}.p144-roadmap-stage{padding:.9rem}}
+
+/* Historical admission-year PDF archive */
+.p144-history-pdf-section{background:#fff}
+.p144-history-intro{margin:0 0 1.2rem;color:var(--p144-text-muted)}
+.p144-history-pdf-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem}
+.p144-history-pdf-card{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:.75rem;min-height:88px;padding:.9rem 1rem;background:#fff;border:1px solid var(--p144-border-light);border-left:3px solid var(--p144-gold);color:var(--p144-navy);text-decoration:none;transition:border-color .18s,transform .18s}
+.p144-history-pdf-card:hover{border-color:var(--p144-burgundy);transform:translateY(-2px)}
+.p144-history-pdf-card:focus-visible{outline:3px solid #997516;outline-offset:3px}
+.p144-history-year{font-family:var(--p144-font-serif);font-size:1.35rem;font-weight:700;line-height:1.15;color:var(--p144-burgundy)}
+.p144-history-year small,.p144-history-file small{display:block;font-family:var(--p144-font-sans);font-size:.68rem;font-weight:500;line-height:1.5;color:var(--p144-text-muted)}
+.p144-history-file{font-size:.88rem;font-weight:600;line-height:1.5}
+.p144-history-arrow{font-size:1.1rem;color:var(--p144-burgundy)}
+.p144-history-note,.p144-history-sources{margin:.9rem 0 0;color:var(--p144-text-muted);font-size:.82rem;line-height:1.7}
+.p144-history-sources a{color:var(--p144-burgundy);text-underline-offset:3px}
+@media(max-width:900px){.p144-history-pdf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.p144-history-pdf-grid{grid-template-columns:1fr}.p144-history-pdf-card{min-height:76px}}
