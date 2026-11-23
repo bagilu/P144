@@ -217,3 +217,30 @@ html{scroll-padding-top:115px}
 .p144-people-section .p144-curriculum-module{margin-top:0}
 .p144-people-section .p144-profile-grid{margin-top:0}
 @media(max-width:768px){.p144-people-hero{min-height:230px;padding:2.3rem 0;background-image:linear-gradient(90deg,rgba(17,33,58,.98) 0%,rgba(17,33,58,.93) 50%,rgba(17,33,58,.68) 100%),url("../../graph/G10.jpg");background-position:center,right center;background-size:cover,auto 155%}.p144-people-hero h1{font-size:1.8rem}.p144-people-hero-copy{max-width:90%}}
+
+/* Refine people banner and profile cards: keep artwork within the shared header frame */
+.p144-people-hero{display:block;min-height:258px;padding:0;background-image:none}
+.p144-people-hero .p144-container{position:relative;display:flex;align-items:center;min-height:258px}
+.p144-people-hero .p144-container:after{content:"";position:absolute;z-index:0;top:0;right:2rem;width:55%;height:100%;pointer-events:none;background-image:linear-gradient(90deg,rgba(17,33,58,.98) 0%,rgba(17,33,58,.65) 25%,rgba(17,33,58,.08) 72%),url("../../graph/G10.jpg");background-repeat:no-repeat;background-position:center,right 43%;background-size:100% 100%,auto 175%}
+.p144-people-hero-copy{z-index:1;width:min(560px,52%)}
+.p144-people-section .p144-tab-panel{padding:1.6rem}
+.p144-people-section .p144-profile-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.4rem;margin:0 0 1.5rem}
+.p144-people-section .p144-profile-card{display:flex;flex-direction:column;padding:1.35rem 1.45rem;border-top-width:3px}
+.p144-people-section .p144-profile-card header{grid-template-columns:150px minmax(0,1fr);grid-template-rows:min-content auto;align-items:start;gap:.55rem 1rem;min-height:180px;padding-bottom:1rem}
+.p144-people-section .p144-profile-photo,.p144-people-section .p144-profile-photo-missing{width:150px;height:180px;grid-column:1;grid-row:1 / span 2}
+.p144-people-section .p144-profile-card header>div{grid-column:2;grid-row:1}
+.p144-people-section .p144-profile-card h4{font-size:1.35rem;line-height:1.45}
+.p144-people-section .p144-profile-en{font-size:.9rem}
+.p144-people-section .p144-profile-role{grid-column:2;grid-row:2;justify-self:start;text-align:left;font-size:.78rem}
+.p144-people-section .p144-profile-card dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin:.9rem 0}
+.p144-people-section .p144-profile-card dl>div{display:block;padding:.72rem .78rem;background:var(--p144-bg-subtle);border-left:2px solid var(--p144-gold)}
+.p144-people-section .p144-profile-card dl>div:last-child:nth-child(odd){grid-column:1/-1}
+.p144-people-section .p144-profile-card dt{margin-bottom:.2rem;font-size:.76rem}
+.p144-people-section .p144-profile-card dd{font-size:.86rem;line-height:1.65}
+.p144-people-section .p144-profile-links{margin-top:auto;padding-top:.75rem}
+.p144-people-section .p144-profile-links a,.p144-people-section .p144-profile-phone{font-size:.82rem}
+.p144-people-section .p144-profile-note{font-size:.8rem}
+.p144-staff-grid .p144-profile-card dl{grid-template-columns:1fr}
+@media(max-width:900px){.p144-people-section .p144-profile-grid{grid-template-columns:1fr}.p144-people-hero-copy{width:min(520px,58%)}}
+@media(max-width:768px){.p144-people-hero{min-height:230px}.p144-people-hero .p144-container{min-height:230px}.p144-people-hero .p144-container:after{right:1.25rem;width:57%;opacity:.78;background-position:center,right 45%;background-size:100% 100%,auto 150%}.p144-people-hero-copy{width:min(500px,68%)}.p144-people-hero h1{font-size:1.8rem}.p144-people-section .p144-tab-panel{padding:1rem}.p144-people-section .p144-profile-card{padding:1rem}.p144-people-section .p144-profile-card header{grid-template-columns:150px minmax(0,1fr);gap:.5rem .8rem}.p144-people-section .p144-profile-card dl{grid-template-columns:1fr}}
+@media(max-width:520px){.p144-people-hero .p144-people-hero-copy{width:100%;max-width:100%;padding-right:3rem}.p144-people-hero .p144-container:after{right:1.25rem;width:48%;opacity:.44}.p144-people-section .p144-profile-card header{grid-template-columns:144px minmax(0,1fr)}.p144-people-section .p144-profile-photo,.p144-people-section .p144-profile-photo-missing{width:144px;height:176px}.p144-people-section .p144-profile-card h4{font-size:1.18rem}}
