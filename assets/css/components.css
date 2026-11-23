@@ -205,4 +205,4 @@ html{scroll-padding-top:115px}
 .p144-profile-card header .p144-profile-en{overflow-wrap:anywhere}
 .p144-profile-role{grid-column:2;justify-self:start;white-space:normal}
 
-.p144-people-section .p144-academic-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}
+.p144-people-section .p144-academic-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
