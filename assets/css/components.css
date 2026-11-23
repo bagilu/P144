@@ -175,3 +175,24 @@ html{scroll-padding-top:115px}
 .p144-core-card:nth-child(1) .p144-core-icon{color:#8e1b32}.p144-core-card:nth-child(2) .p144-core-icon{color:#98781e}.p144-core-card:nth-child(3) .p144-core-icon{color:#3b8e7a}.p144-core-card:nth-child(4) .p144-core-icon{color:#5579ad}
 .p144-core-card h4{margin:.25rem 0 0}
 @media(max-width:768px){.p144-core-card{min-height:142px;padding:.75rem}.p144-core-icon{width:42px;height:42px;margin:.4rem 0}.p144-core-card h4{font-size:.82rem}}
+
+/* Faculty and staff directory cards. */
+.p144-people-section{padding-top:3rem}
+.p144-people-heading{margin:1.3rem 0 1rem;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1.35rem}
+.p144-profile-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1rem 0 1.5rem}
+.p144-profile-card{display:flex;flex-direction:column;min-width:0;padding:1.15rem 1.2rem;background:#fff;border:1px solid var(--p144-border-light);border-top:3px solid var(--p144-gold)}
+.p144-profile-card header{display:flex;align-items:flex-start;justify-content:space-between;gap:.6rem;padding-bottom:.7rem;border-bottom:1px solid var(--p144-border-light)}
+.p144-profile-card h4{margin:0;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1.16rem}
+.p144-profile-en{margin:.18rem 0 0;color:var(--p144-text-muted);font-size:.76rem}
+.p144-profile-role{flex:0 0 auto;padding:.25rem .45rem;color:var(--p144-burgundy);background:#f6f3ea;font-size:.7rem;line-height:1.45;text-align:center}
+.p144-profile-card dl{display:grid;gap:.65rem;margin:.8rem 0}
+.p144-profile-card dl>div{display:grid;grid-template-columns:3.2rem minmax(0,1fr);gap:.45rem}
+.p144-profile-card dt{color:var(--p144-burgundy);font-size:.75rem;font-weight:600}
+.p144-profile-card dd{margin:0;color:var(--p144-text-muted);font-size:.84rem;line-height:1.6}
+.p144-profile-links{display:flex;flex-wrap:wrap;gap:.35rem .75rem;margin-top:auto;padding-top:.65rem;border-top:1px solid var(--p144-border-light)}
+.p144-profile-links a{font-size:.76rem;line-height:1.5;overflow-wrap:anywhere}
+.p144-profile-note{margin:.6rem 0 0;color:#70571c;font-size:.74rem;line-height:1.55}
+.p144-people-source{margin:1.3rem 0 0;padding:1rem 1.1rem;background:var(--p144-bg-subtle);color:var(--p144-text-muted);font-size:.8rem;line-height:1.7}
+.p144-staff-grid{grid-template-columns:minmax(260px,380px)}
+@media(max-width:1000px){.p144-profile-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.p144-people-section{padding-top:2rem}.p144-profile-grid,.p144-staff-grid{grid-template-columns:1fr}.p144-profile-card{padding:1rem}.p144-profile-card header{gap:.4rem}.p144-profile-card h4{font-size:1.08rem}.p144-profile-role{font-size:.66rem}}
