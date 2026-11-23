@@ -244,3 +244,58 @@ html{scroll-padding-top:115px}
 @media(max-width:900px){.p144-people-section .p144-profile-grid{grid-template-columns:1fr}.p144-people-hero-copy{width:min(520px,58%)}}
 @media(max-width:768px){.p144-people-hero{min-height:230px}.p144-people-hero .p144-container{min-height:230px}.p144-people-hero .p144-container:after{right:1.25rem;width:57%;opacity:.78;background-position:center,right 45%;background-size:100% 100%,auto 150%}.p144-people-hero-copy{width:min(500px,68%)}.p144-people-hero h1{font-size:1.8rem}.p144-people-section .p144-tab-panel{padding:1rem}.p144-people-section .p144-profile-card{padding:1rem}.p144-people-section .p144-profile-card header{grid-template-columns:150px minmax(0,1fr);gap:.5rem .8rem}.p144-people-section .p144-profile-card dl{grid-template-columns:1fr}}
 @media(max-width:520px){.p144-people-hero .p144-people-hero-copy{width:100%;max-width:100%;padding-right:3rem}.p144-people-hero .p144-container:after{right:1.25rem;width:48%;opacity:.44}.p144-people-section .p144-profile-card header{grid-template-columns:144px minmax(0,1fr)}.p144-people-section .p144-profile-photo,.p144-people-section .p144-profile-photo-missing{width:144px;height:176px}.p144-people-section .p144-profile-card h4{font-size:1.18rem}}
+
+/* P3 curriculum page, using the shared framed blueprint banner */
+.p144-course-hero{position:relative;isolation:isolate;display:block;min-height:258px;overflow:hidden;padding:0;background:#11213a;color:#fff;border-bottom:4px solid var(--p144-gold)}
+.p144-course-hero .p144-container{position:relative;display:flex;align-items:center;min-height:258px}
+.p144-course-hero .p144-container:after{content:"";position:absolute;z-index:0;top:0;right:2rem;width:55%;height:100%;pointer-events:none;background-image:linear-gradient(90deg,rgba(17,33,58,.98) 0%,rgba(17,33,58,.62) 25%,rgba(17,33,58,.04) 72%),url("../../graph/G11.jpg");background-repeat:no-repeat;background-position:center,right 45%;background-size:100% 100%,auto 175%}
+.p144-course-hero-copy{position:relative;z-index:1;width:min(560px,52%)}
+.p144-course-hero-kicker{margin:0 0 .7rem;color:#d4b66f;font-family:var(--p144-font-display);font-size:.82rem;font-weight:700;letter-spacing:2px}
+.p144-course-hero h1{margin:0 0 .65rem;color:#f7f5ef;font-family:var(--p144-font-serif);font-size:2.15rem;line-height:1.3}
+.p144-course-hero-intro{margin:0;color:#c7d2e1;font-size:1rem;line-height:1.7}
+.p144-course-section{padding:3.5rem 0 4rem;border-bottom:1px solid var(--p144-border-light)}
+.p144-course-section:nth-of-type(odd){background:#f5f3ef}
+.p144-course-section-head{margin-bottom:1.4rem}
+.p144-course-section-head>span{display:block;margin-bottom:.35rem;color:var(--p144-burgundy);font-family:var(--p144-font-display);font-size:.75rem;font-weight:700;letter-spacing:1.7px}
+.p144-course-section-head h2{margin:0;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:2rem}
+.p144-course-figure{margin:0 0 1.6rem;padding:.5rem;background:#fff;border:1px solid var(--p144-border-light)}
+.p144-course-figure img{display:block;width:100%;height:auto}
+.p144-course-categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.p144-course-category,.p144-course-module,.p144-credit-card,.p144-roadmap-stage{background:#fff;border:1px solid var(--p144-border-light)}
+.p144-course-category{padding:1.2rem 1.35rem;border-top:3px solid var(--p144-navy)}
+.p144-course-category h3,.p144-course-module h4{margin:0 0 .55rem;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1.12rem}
+.p144-course-category p{margin:0;color:var(--p144-text-muted);line-height:1.75}
+.p144-course-category-wide{grid-column:1/-1}
+.p144-course-subheading{margin:1.7rem 0 .8rem;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1.35rem}
+.p144-course-modules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.p144-course-module{padding:1.25rem 1.4rem;border-top:3px solid #183e91}
+.p144-sustainable-module{border-top-color:#246b33}
+.p144-course-module ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.35rem 1.2rem;margin:.5rem 0 0;padding-left:1.2rem;color:var(--p144-text-muted);line-height:1.65}
+.p144-credit-total{display:flex;align-items:baseline;gap:1rem;margin:1.6rem 0;padding:1rem 1.25rem;background:var(--p144-navy);color:#fff;border-left:4px solid var(--p144-gold)}
+.p144-credit-total strong{font-family:var(--p144-font-serif);font-size:2rem}
+.p144-credit-total strong small{font-size:1rem}
+.p144-credit-total>span:last-child{margin-left:auto;color:#d8c49a}
+.p144-credit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.p144-credit-card{padding:1.2rem 1.35rem;border-top:3px solid var(--p144-gold)}
+.p144-credit-card header{display:flex;justify-content:space-between;align-items:baseline;gap:.6rem;margin-bottom:.65rem}
+.p144-credit-card h3{margin:0;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1.05rem}
+.p144-credit-card header strong{flex:0 0 auto;color:var(--p144-burgundy);font-size:.92rem}
+.p144-credit-card header strong small{color:var(--p144-text-muted);font-size:.76rem;font-weight:400}
+.p144-credit-card p{margin:0 0 .6rem;color:var(--p144-text-muted);line-height:1.7}
+.p144-credit-purpose{display:block;color:var(--p144-navy);font-weight:600}
+.p144-credit-card-wide{grid-column:1/-1}
+.p144-credit-note{margin-top:.6rem!important;padding-top:.55rem;border-top:1px dashed var(--p144-border-light);font-size:.8rem}
+.p144-roadmap-stage-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem}
+.p144-roadmap-stage{padding:1.25rem;border-top:4px solid #234a9d}
+.p144-roadmap-stage-green{border-top-color:#276d36}
+.p144-roadmap-stage>h3{margin:0 0 1rem;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1.2rem}
+.p144-roadmap-stage>h3 small{display:inline-block;margin-left:.3rem;color:var(--p144-text-muted);font-family:var(--p144-font-sans);font-size:.8rem}
+.p144-roadmap-year{margin-top:.8rem;padding:1rem 1.05rem;background:#f8f7f4;border:1px solid var(--p144-border-light)}
+.p144-roadmap-year h4{margin:0 0 .6rem;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1rem}
+.p144-roadmap-year p{margin:.45rem 0 0;color:var(--p144-text-muted);font-size:.88rem;line-height:1.75}
+.p144-roadmap-year strong{color:var(--p144-navy)}
+.p144-career-sequence{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.6rem 1rem;margin:1.5rem 0 0;padding:1rem;background:#fff;border:1px solid var(--p144-border-light);color:var(--p144-navy);font-weight:600}
+.p144-career-sequence b{color:#2f68c8;font-size:1.2rem}
+@media(max-width:900px){.p144-roadmap-stage-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.p144-course-hero,.p144-course-hero .p144-container{min-height:230px}.p144-course-hero .p144-container:after{right:1.25rem;width:57%;opacity:.78;background-size:100% 100%,auto 150%}.p144-course-hero-copy{width:68%}.p144-course-hero h1{font-size:1.8rem}.p144-course-section{padding:2.5rem 0 3rem}.p144-course-categories,.p144-course-modules,.p144-credit-grid{grid-template-columns:1fr}.p144-course-category-wide,.p144-credit-card-wide{grid-column:auto}.p144-course-module ul{grid-template-columns:1fr 1fr}.p144-credit-card header{flex-wrap:wrap}}
+@media(max-width:520px){.p144-course-hero-copy{width:100%;padding-right:3rem}.p144-course-hero .p144-container:after{right:1.25rem;width:48%;opacity:.44}.p144-course-section-head h2{font-size:1.6rem}.p144-course-module ul{grid-template-columns:1fr}.p144-credit-total{gap:.6rem}.p144-credit-total strong{font-size:1.65rem}.p144-roadmap-stage{padding:.9rem}}
