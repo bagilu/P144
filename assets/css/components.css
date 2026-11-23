@@ -196,3 +196,5 @@ html{scroll-padding-top:115px}
 .p144-staff-grid{grid-template-columns:minmax(260px,380px)}
 @media(max-width:1000px){.p144-profile-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.p144-people-section{padding-top:2rem}.p144-profile-grid,.p144-staff-grid{grid-template-columns:1fr}.p144-profile-card{padding:1rem}.p144-profile-card header{gap:.4rem}.p144-profile-card h4{font-size:1.08rem}.p144-profile-role{font-size:.66rem}}
+
+.p144-profile-phone{color:var(--p144-text-muted);font-size:.76rem;line-height:1.5}
