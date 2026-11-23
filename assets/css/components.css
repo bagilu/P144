@@ -167,3 +167,11 @@ html{scroll-padding-top:115px}
 .p144-history-timeline article>span{grid-column:1;grid-row:1 / span 2}
 .p144-history-timeline article h3,.p144-history-timeline article p{grid-column:2}
 @media(max-width:768px){.p144-history-timeline article>span{grid-column:1;grid-row:1 / span 2}.p144-history-timeline article h3,.p144-history-timeline article p{grid-column:2}}
+
+/* Distinct line icons add visual cues while keeping the four competencies readable. */
+.p144-core-card{position:relative;min-height:154px;padding:1rem 1rem .9rem}
+.p144-core-number{display:block}
+.p144-core-icon{display:block;width:48px;height:48px;margin:.5rem 0 .45rem;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.p144-core-card:nth-child(1) .p144-core-icon{color:#8e1b32}.p144-core-card:nth-child(2) .p144-core-icon{color:#98781e}.p144-core-card:nth-child(3) .p144-core-icon{color:#3b8e7a}.p144-core-card:nth-child(4) .p144-core-icon{color:#5579ad}
+.p144-core-card h4{margin:.25rem 0 0}
+@media(max-width:768px){.p144-core-card{min-height:142px;padding:.75rem}.p144-core-icon{width:42px;height:42px;margin:.4rem 0}.p144-core-card h4{font-size:.82rem}}
