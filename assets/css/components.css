@@ -554,6 +554,7 @@ html{scroll-padding-top:115px}
 .p144-people-hero .p144-container,.p144-course-hero .p144-container,.p144-research-hero .p144-container,.p144-research-detail-hero .p144-container,.p144-learning-hero .p144-container{overflow:hidden}
 .p144-admissions-hero{overflow:hidden}
 .p144-admissions-hero-inner{position:relative;overflow:hidden;padding-right:2rem}
+.p144-admissions-art-resource{right:2rem}
 .p144-admissions-art{
   right:0;
   width:min(62%, 760px);
@@ -568,6 +569,7 @@ html{scroll-padding-top:115px}
   .p144-people-hero .p144-container:after,.p144-course-hero .p144-container:after,.p144-research-hero .p144-container:after,.p144-research-detail-hero .p144-container:after,.p144-learning-hero .p144-container:after{right:1.25rem;width:68%;background-size:100% 100%,100% 100%,auto 150%}
   .p144-admissions-hero-inner{padding-right:1.25rem}
   .p144-admissions-art{width:68%}
+  .p144-admissions-art-resource{right:1.25rem}
 }
 @media(max-width:540px){
   .p144-people-hero .p144-container:after,.p144-course-hero .p144-container:after,.p144-research-hero .p144-container:after,.p144-research-detail-hero .p144-container:after,.p144-learning-hero .p144-container:after{width:76%;opacity:.72;background-size:100% 100%,100% 100%,auto 125%}
