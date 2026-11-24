@@ -766,3 +766,16 @@ html{scroll-padding-top:115px}
 .p144-presentation-card h3{margin:.7rem 0}
 .p144-presentation-card p{max-width:64ch;line-height:1.8}
 @media(max-width:760px){.p144-presentation-layout{grid-template-columns:1fr}.p144-presentation-visual img{height:auto;min-height:0;aspect-ratio:16/9;object-fit:cover}}
+
+/* P64 alumni profiles */
+.p144-alumni-showcase{background:#f8f7f3}
+.p144-alumni-intro{max-width:68ch;line-height:1.85;color:#56616e}
+.p144-alumni-stories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem;margin-top:2rem}
+.p144-alumni-story-card{overflow:hidden;background:#fff;border:1px solid rgba(22,42,69,.12);box-shadow:0 14px 34px rgba(18,36,60,.08)}
+.p144-alumni-story-card figure{margin:0;background:#101114}
+.p144-alumni-story-card figure img{display:block;width:100%;height:auto}
+.p144-alumni-story-copy{padding:1.5rem 1.75rem 1.75rem}
+.p144-alumni-story-copy h3{margin:.5rem 0 1rem;color:#162a45;font-family:"Noto Serif TC",serif;font-size:1.6rem}
+.p144-alumni-story-copy p{margin:.5rem 0;line-height:1.75;color:#4c5663}
+.p144-alumni-story-copy strong{color:#162a45}
+@media(max-width:760px){.p144-alumni-stories{grid-template-columns:1fr}.p144-alumni-story-copy{padding:1.25rem}}
