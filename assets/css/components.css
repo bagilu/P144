@@ -752,3 +752,8 @@ html{scroll-padding-top:115px}
 .p144-campus-life-card small{display:inline-block;margin-top:.7rem;padding:.35rem .65rem;background:#f5f1e8;color:#786938;letter-spacing:.08em}
 @media(max-width:1000px){.p144-campus-life-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.p144-course-directory-grid,.p144-campus-life-grid{grid-template-columns:1fr}.p144-campus-life-card{min-height:0}}
+
+/* English admissions presentation download card */
+.p144-presentation-card{max-width:860px;margin-top:1.75rem}
+.p144-presentation-card h3{margin:.7rem 0}
+.p144-presentation-card p{max-width:64ch;line-height:1.8}
