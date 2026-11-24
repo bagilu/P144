@@ -389,6 +389,9 @@ html{scroll-padding-top:115px}
 .p144-work-card{overflow:hidden;border-radius:2px;display:flex;flex-direction:column}
 .p144-work-card>div:last-child{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:1.1rem 1.15rem}
 .p144-work-photo{display:block;width:100%;height:205px;object-fit:cover;background:#e8e6e1}
+.p144-award-photo-wrap{margin:0;background:#f4f2ee}
+.p144-award-photo-wrap img{display:block;width:100%;height:auto;aspect-ratio:865/649;object-fit:contain;background:#eee}
+.p144-award-photo-wrap figcaption{padding:.7rem 1rem;color:var(--p144-navy);font-size:.84rem;font-weight:600;line-height:1.6}
 .p144-work-gallery{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:#fff}
 .p144-work-gallery img{display:block;width:100%;height:205px;object-fit:cover}
 .p144-work-cover{display:flex;align-items:flex-end;min-height:205px;padding:1.2rem;background:linear-gradient(135deg,#10284b,#1d4167 70%,#14243a);color:#fff}
