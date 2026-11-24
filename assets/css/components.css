@@ -717,3 +717,6 @@ html{scroll-padding-top:115px}
 .p144-certification-map>.p144-core-heading h3{width:100%;margin:.25rem 0;color:var(--p144-navy);font-size:clamp(1.55rem,2.8vw,2.15rem);line-height:1.35}
 .p144-certification-map>.p144-core-heading p{margin:.25rem 0 0;color:#7a241d;font-weight:700;letter-spacing:.06em;line-height:1.7}
 @media(max-width:600px){.p144-certification-map>.p144-core-heading h3{font-size:1.45rem}.p144-certification-map>.p144-core-heading p{font-size:.9rem}}
+
+.p144-international-photo-natural{height:auto;min-height:0;max-height:none;align-self:start}
+.p144-international-photo-natural img{height:auto;min-height:0;flex:none;aspect-ratio:976/732;object-fit:contain}
