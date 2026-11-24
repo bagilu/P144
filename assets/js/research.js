@@ -8,7 +8,7 @@
   const year = root.querySelector("#research-year");
   const sort = root.querySelector("#research-sort");
   const escapeHTML = (value) => String(value ?? "").replace(/[&<>"']/g, (ch) => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" })[ch]);
-  const recordsURL = "data/research.json";
+  const recordsURL = "data/research.json?v=20261124-hsu";
 
   fetch(recordsURL)
     .then((response) => {
