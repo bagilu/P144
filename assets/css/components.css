@@ -656,3 +656,22 @@ html{scroll-padding-top:115px}
 .p144-international-vision-themes ul{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;margin:0;padding-left:1.1rem;font-size:.88rem;line-height:1.7}
 .p144-international-vision-outcome{margin:1.2rem 0 .5rem;padding:1rem 1.1rem;border-left:4px solid var(--p144-gold);background:#f4f0e7;color:#17243a;font-weight:700;line-height:1.8}
 @media(max-width:768px){.p144-international-vision{margin:1.5rem 0;padding:1.1rem}.p144-international-vision-grid,.p144-international-vision-themes{grid-template-columns:1fr}.p144-international-vision-grid{gap:.7rem}.p144-international-vision-grid .p144-international-case{padding:1rem}.p144-international-vision-figure{margin:1rem 0 1.3rem}}
+
+/* P43 overseas study and global engagement infographic */
+.p144-international-study{margin:2rem 0 2.5rem;padding:1.6rem 1.7rem;background:#fff;border:1px solid var(--p144-border-light);border-top:4px solid var(--p144-gold)}
+.p144-international-study-heading{text-align:center;margin:0 auto 1.2rem}
+.p144-international-study-heading .p144-section-pretitle{display:block}
+.p144-international-study-heading h2{margin:.3rem 0;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:clamp(1.55rem,2.5vw,2.1rem)}
+.p144-international-study-heading>p{margin:.4rem 0;color:#7a241d;font-weight:700;letter-spacing:.08em}
+.p144-international-study-figure{max-width:1120px;margin:1.2rem auto 1.8rem;background:#fff;border:1px solid var(--p144-border-light);box-shadow:0 8px 24px #07101e12}
+.p144-international-study-figure img{display:block;width:100%;height:auto}
+.p144-international-study-figure figcaption{padding:.7rem 1rem;background:#11213a;color:#fff;text-align:center;font-size:.85rem}
+.p144-international-study-text{max-width:1120px;margin:0 auto}
+.p144-international-study-text>h3{margin:1.3rem 0 .7rem;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1.3rem}
+.p144-international-study-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.p144-international-study-grid .p144-international-case{padding:1.15rem 1.25rem}
+.p144-international-study-grid .p144-international-case h4{margin:.2rem 0 .5rem;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1.08rem}
+.p144-international-study-grid .p144-international-case li{color:#344258;font-size:.9rem;line-height:1.75}
+.p144-international-study-grid .p144-international-case ul{margin:.45rem 0;padding-left:1.2rem}
+.p144-international-study-motto{margin:1.2rem 0 .5rem;padding:1rem 1.1rem;border-left:4px solid var(--p144-gold);background:#11213a;color:#fff;font-size:1.05rem;font-weight:700;letter-spacing:.08em;text-align:center}
+@media(max-width:768px){.p144-international-study{margin:1.5rem 0;padding:1.1rem}.p144-international-study-grid{grid-template-columns:1fr;gap:.7rem}.p144-international-study-grid .p144-international-case{padding:1rem}.p144-international-study-figure{margin:1rem 0 1.3rem}}
