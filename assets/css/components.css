@@ -757,3 +757,12 @@ html{scroll-padding-top:115px}
 .p144-presentation-card{max-width:860px;margin-top:1.75rem}
 .p144-presentation-card h3{margin:.7rem 0}
 .p144-presentation-card p{max-width:64ch;line-height:1.8}
+
+/* P5 English admissions presentation image and download link */
+.p144-presentation-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.25rem;align-items:stretch;margin-top:1.75rem}
+.p144-presentation-visual{margin:0;overflow:hidden;border-radius:4px;background:#f4f1e9;box-shadow:0 12px 28px rgba(18,36,60,.09)}
+.p144-presentation-visual img{display:block;width:100%;height:100%;min-height:300px;object-fit:cover;object-position:center}
+.p144-presentation-card{max-width:none;margin:0;display:flex;flex-direction:column;justify-content:center}
+.p144-presentation-card h3{margin:.7rem 0}
+.p144-presentation-card p{max-width:64ch;line-height:1.8}
+@media(max-width:760px){.p144-presentation-layout{grid-template-columns:1fr}.p144-presentation-visual img{height:auto;min-height:0;aspect-ratio:16/9;object-fit:cover}}
