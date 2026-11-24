@@ -528,8 +528,8 @@ html{scroll-padding-top:115px}
 
 
 /* Unified interior-page hero banner system.
-   Copy may run across the blueprint; the image remains clipped to the shared container.
-   A narrow dark-to-transparent edge gradient finishes every blueprint at the right. */
+   Blueprint remains visible and clipped to the shared content container.
+   Copy overlays the image area; a narrow fade finishes the image at the right edge. */
 .p144-people-hero .p144-container:after,
 .p144-course-hero .p144-container:after,
 .p144-research-hero .p144-container:after,
@@ -538,8 +538,8 @@ html{scroll-padding-top:115px}
   right:2rem;
   width:min(62%, 760px);
   background-image:
-    linear-gradient(to right, rgba(14,30,56,.38) 0%, rgba(14,30,56,.08) 38%, transparent 72%),
-    linear-gradient(to left, #0e1e38 0%, rgba(14,30,56,.55) 3%, transparent 16%),
+    linear-gradient(to right, #0e1e38 0%, rgba(14,30,56,.88) 12%, rgba(14,30,56,.18) 46%, transparent 70%),
+    linear-gradient(to left, #0e1e38 0%, rgba(14,30,56,.35) 12px, transparent 28px),
     var(--p144-hero-blueprint);
   background-repeat:no-repeat;
   background-position:center,center,right center;
@@ -553,30 +553,26 @@ html{scroll-padding-top:115px}
 .p144-people-hero-copy,.p144-course-hero-copy,.p144-research-hero-copy,.p144-research-detail-copy,.p144-learning-hero-copy{width:100%;max-width:100%;position:relative;z-index:1}
 .p144-people-hero .p144-container,.p144-course-hero .p144-container,.p144-research-hero .p144-container,.p144-research-detail-hero .p144-container,.p144-learning-hero .p144-container{overflow:hidden}
 .p144-admissions-hero{overflow:hidden}
-.p144-admissions-hero-inner{overflow:hidden;padding-right:2rem}
+.p144-admissions-hero-inner{position:relative;overflow:hidden;padding-right:2rem}
 .p144-admissions-art{
-  right:2rem;
+  right:0;
   width:min(62%, 760px);
   object-fit:cover;
   object-position:center right;
-  mask-image:linear-gradient(to left,#0e1e38 0%,rgba(14,30,56,.58) 3%,transparent 16%);
+  -webkit-mask-image:linear-gradient(to right, transparent 0%, #000 18%, #000 calc(100% - 28px), transparent 100%);
+  mask-image:linear-gradient(to right, transparent 0%, #000 18%, #000 calc(100% - 28px), transparent 100%);
 }
-.p144-admissions-copy{
-  width:100%;
-  max-width:none;
-  padding:.8rem 0;
-  background:none;
-}
+.p144-admissions-copy{width:100%;max-width:none;padding:.8rem 0;background:none}
 .p144-admissions-copy h1,.p144-admissions-lead{max-width:760px}
 @media(max-width:900px){
   .p144-people-hero .p144-container:after,.p144-course-hero .p144-container:after,.p144-research-hero .p144-container:after,.p144-research-detail-hero .p144-container:after,.p144-learning-hero .p144-container:after{right:1.25rem;width:68%;background-size:100% 100%,100% 100%,auto 150%}
   .p144-admissions-hero-inner{padding-right:1.25rem}
-  .p144-admissions-art{right:1.25rem;width:68%}
+  .p144-admissions-art{width:68%}
 }
 @media(max-width:540px){
-  .p144-people-hero .p144-container:after,.p144-course-hero .p144-container:after,.p144-research-hero .p144-container:after,.p144-research-detail-hero .p144-container:after,.p144-learning-hero .p144-container:after{width:76%;opacity:.62;background-size:100% 100%,100% 100%,auto 125%}
+  .p144-people-hero .p144-container:after,.p144-course-hero .p144-container:after,.p144-research-hero .p144-container:after,.p144-research-detail-hero .p144-container:after,.p144-learning-hero .p144-container:after{width:76%;opacity:.72;background-size:100% 100%,100% 100%,auto 125%}
   .p144-admissions-hero-inner{min-height:285px}
-  .p144-admissions-art{width:78%;opacity:.58}
+  .p144-admissions-art{width:78%;opacity:.76}
   .p144-admissions-copy h1{font-size:1.65rem}
   .p144-admissions-lead{font-size:.9rem}
 }
