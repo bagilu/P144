@@ -519,3 +519,9 @@ html{scroll-padding-top:115px}
 .p144-table-hint{margin:.45rem 0 0;color:#40516a;font-size:.78rem}
 .p144-domestic-section .p144-work-note{margin-top:1rem;background:#fff;color:#344258}
 @media(max-width:680px){.p144-admissions-table{font-size:.87rem}.p144-admissions-table th,.p144-admissions-table td{padding:.65rem .7rem}.p144-quota-summary{margin-bottom:.8rem}}
+
+
+/* Keep blueprint artwork within the shared navigation container edge */
+.p144-admissions-art{right:max(calc((100vw - 1280px)/2 + 2rem),1.25rem);mask-image:linear-gradient(to right,transparent 0%,#000 18%,#000 calc(100% - 24px),transparent 100%)}
+@media(max-width:760px){.p144-admissions-art{right:max(calc((100vw - 1280px)/2 + 1.25rem),1rem)}}
+@media(max-width:540px){.p144-admissions-art{right:1rem}}
