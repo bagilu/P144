@@ -16,6 +16,14 @@
       return response.json();
     })
     .then((records) => {
+      // Create one fresh random sequence per page load; filters keep that order stable.
+      const shuffled = [...records];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      const randomRank = new Map(shuffled.map((item, index) => [item.id, index]));
+
       const years = [...new Set(records.map((item) => Number(item.year)))].sort((a, b) => b - a);
       years.forEach((value) => {
         const option = document.createElement("option");
@@ -34,6 +42,7 @@
           const haystack = [item.id, item.title, item.author, item.year, item.description, item.citation].join(" ").toLocaleLowerCase();
           return matchesAuthor && matchesYear && (!query || haystack.includes(query));
         }).sort((a, b) => {
+          if (sort.value === "random") return randomRank.get(a.id) - randomRank.get(b.id);
           if (sort.value === "year-asc") return a.year - b.year || a.id.localeCompare(b.id);
           if (sort.value === "author") return a.author.localeCompare(b.author, "zh-Hant") || b.year - a.year;
           if (sort.value === "title") return a.title.localeCompare(b.title);
