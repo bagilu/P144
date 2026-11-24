@@ -35,7 +35,7 @@ async function loadP144Fragment(id,path,initialize) {
   const host=document.getElementById(id);if(!host)return false;
   host.setAttribute('aria-busy','true');
   try {
-    const response=await fetch(path);if(!response.ok)throw new Error(`HTTP ${response.status}`);
+    const response=await fetch(path+'?v=20261124-nav-update');if(!response.ok)throw new Error(`HTTP ${response.status}`);
     const markup=await response.text();
     const template=document.createElement('template');template.innerHTML=markup;
     const selector=id==='site-header'?'header.p144-site-header':'footer.p144-academic-footer';
