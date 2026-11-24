@@ -484,7 +484,7 @@ html{scroll-padding-top:115px}
 .p144-admissions-kicker{margin:0 0 .65rem;color:#e2cb91;font-family:var(--p144-font-display);font-size:.82rem;font-weight:700;letter-spacing:2px}
 .p144-admissions-copy h1{max-width:620px;margin:0 0 .65rem;color:#f7f5ef;font-family:var(--p144-font-serif);font-size:clamp(1.8rem,3vw,2.4rem);line-height:1.4}
 .p144-admissions-lead{max-width:580px;margin:0;color:#dce5ef;font-size:1rem;line-height:1.75}
-.p144-admissions-art{position:absolute;z-index:1;right:0;top:0;width:62%;height:100%;object-fit:cover;object-position:center right;pointer-events:none}
+.p144-admissions-art{position:absolute;z-index:1;right:0;top:0;width:62%;height:100%;object-fit:cover;object-position:center right;pointer-events:none;mask-image:linear-gradient(to right,transparent 0%,#000 18%,#000 97%,transparent 100%)}
 @media(max-width:760px){
  .p144-admissions-hero-inner{min-height:245px}
  .p144-admissions-copy{width:72%}
