@@ -699,3 +699,10 @@ html{scroll-padding-top:115px}
 .p144-career-motto{margin:1.3rem 0;padding:1rem 1.15rem;border-left:4px solid var(--p144-gold);background:#11213a;color:#fff;font-weight:700;line-height:1.8;text-align:center}
 @media(max-width:850px){.p144-career-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.p144-career-options{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.p144-career-grid,.p144-career-options{grid-template-columns:1fr}.p144-career-infographic{margin:1rem 0 1.3rem}.p144-career-grid .p144-content-card{padding:1rem}}
+
+/* Homepage bilingual department introduction */
+.p144-english-profile{max-width:1080px;margin:1.35rem 0 2rem;padding:1.25rem 1.5rem;background:#fff;border:1px solid var(--p144-border-light);border-left:4px solid var(--p144-gold);box-shadow:0 6px 18px #07101e0b}
+.p144-english-profile h3{margin:0 0 .65rem;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1.2rem;line-height:1.45}
+.p144-english-profile p{margin:0;color:#344258;font-family:var(--p144-font-sans);font-size:.95rem;line-height:1.85;letter-spacing:.005em}
+.p144-english-profile strong{color:#142b4e;font-weight:700}
+@media(max-width:768px){.p144-english-profile{margin:1rem 0 1.6rem;padding:1rem 1rem 1rem 1.15rem}.p144-english-profile h3{font-size:1.08rem}.p144-english-profile p{font-size:.88rem;line-height:1.8}}
