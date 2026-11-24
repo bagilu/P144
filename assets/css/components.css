@@ -596,20 +596,21 @@ html{scroll-padding-top:115px}
 .p144-hero-official-slide-title b{color:#e2cb91;font-weight:600}
 @media(max-width:768px){.p144-hero-official-slide-title{max-width:calc(100vw - 2.5rem)}}
 
-/* P42 certification overview */
-.p144-certification-section{padding:.5rem 0}
-.p144-certification-section>.p144-core-heading{text-align:center;margin:0 0 1.2rem}
-.p144-certification-section>.p144-core-heading h2{margin:.4rem 0;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:clamp(1.55rem,2.6vw,2.1rem);line-height:1.4}
-.p144-certification-section>.p144-core-heading p{margin:.4rem 0;color:#7a241d;font-weight:700;letter-spacing:.08em}
-.p144-certification-infographic{max-width:1120px;margin:1.4rem auto 1.8rem;background:#fff;border:1px solid var(--p144-border-light);box-shadow:0 8px 24px #07101e12}
-.p144-certification-infographic img{display:block;width:100%;height:auto}
-.p144-certification-infographic figcaption{padding:.7rem 1rem;background:#11213a;color:#fff;text-align:center;font-size:.85rem}
-.p144-certification-description{max-width:1100px;margin:0 auto}
-.p144-certification-description>h3{margin:1.6rem 0 .7rem;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1.3rem}
-.p144-certification-description .p144-card-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1rem 0 1.8rem}
-.p144-certification-description .p144-content-card{padding:1.15rem}
-.p144-certification-description .p144-content-card h4{margin:.4rem 0;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1.05rem}
-.p144-certification-description .p144-content-card p{margin:.35rem 0;color:var(--p144-text-muted);line-height:1.7}
-.p144-certification-motto{margin:1.2rem 0;padding:1rem 1.25rem;border-left:4px solid var(--p144-gold);background:#11213a;color:#fff;font-weight:700;letter-spacing:.06em;text-align:center}
-@media(max-width:768px){.p144-certification-infographic{margin:1rem 0 1.3rem}.p144-certification-description .p144-card-grid{grid-template-columns:1fr 1fr;gap:.7rem}.p144-certification-description .p144-content-card{padding:.9rem}.p144-certification-section>.p144-core-heading p{line-height:1.8}}
-@media(max-width:480px){.p144-certification-description .p144-card-grid{grid-template-columns:1fr}}
+
+/* P61 graduation and certification map */
+.p144-certification-map{padding:.5rem 0}
+.p144-certification-map>.p144-core-heading{text-align:center;margin:0 0 1.2rem}
+.p144-certification-map>.p144-core-heading h3{margin:.4rem 0;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:clamp(1.5rem,2.5vw,2rem);line-height:1.4}
+.p144-certification-map>.p144-core-heading p{margin:.4rem 0;color:#7a241d;font-weight:700;letter-spacing:.08em}
+.p144-certification-map-figure{max-width:1120px;margin:1.4rem auto 1.8rem;background:#fff;border:1px solid var(--p144-border-light);box-shadow:0 8px 24px #07101e12}
+.p144-certification-map-figure img{display:block;width:100%;height:auto}
+.p144-certification-map-figure figcaption{padding:.7rem 1rem;background:#11213a;color:#fff;text-align:center;font-size:.85rem}
+.p144-certification-map-content{max-width:1100px;margin:0 auto}
+.p144-certification-map-content>h4{margin:1.6rem 0 .7rem;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1.25rem}
+.p144-certification-map-content .p144-card-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1rem 0 1.8rem}
+.p144-certification-map-content .p144-content-card{padding:1.15rem}
+.p144-certification-map-content .p144-content-card h5{margin:.4rem 0;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1.05rem}
+.p144-certification-map-content .p144-content-card p{margin:.35rem 0;color:var(--p144-text-muted);line-height:1.7}
+.p144-certification-map-motto{margin:1.2rem 0;padding:1rem 1.25rem;border-left:4px solid var(--p144-gold);background:#11213a;color:#fff;font-weight:700;letter-spacing:.06em;text-align:center}
+@media(max-width:768px){.p144-certification-map-figure{margin:1rem 0 1.3rem}.p144-certification-map-content .p144-card-grid{grid-template-columns:1fr 1fr;gap:.7rem}.p144-certification-map-content .p144-content-card{padding:.9rem}.p144-certification-map>.p144-core-heading p{line-height:1.8}}
+@media(max-width:480px){.p144-certification-map-content .p144-card-grid{grid-template-columns:1fr}}
