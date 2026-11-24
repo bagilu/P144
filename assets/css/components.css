@@ -527,10 +527,56 @@ html{scroll-padding-top:115px}
 @media(max-width:540px){.p144-admissions-art{right:1rem}}
 
 
-/* Resource banners: readable text backplate and a distinct art column */
-.p144-admissions-copy{width:min(520px,48%);padding:.8rem 1.5rem .8rem 0;background:linear-gradient(90deg,#0e1e38 0%,rgba(14,30,56,.99) 70%,rgba(14,30,56,.94) 84%,rgba(14,30,56,0) 100%)}
-.p144-admissions-copy h1{max-width:500px;font-size:clamp(1.75rem,2.7vw,2.25rem)}
-.p144-admissions-lead{max-width:460px}
-.p144-admissions-art{width:58%}
-@media(max-width:760px){.p144-admissions-copy{width:min(520px,70%);padding:.8rem 1.1rem .8rem 0;background:linear-gradient(90deg,#0e1e38 0%,rgba(14,30,56,.99) 76%,rgba(14,30,56,.9) 88%,rgba(14,30,56,0) 100%)}.p144-admissions-copy h1{font-size:clamp(1.7rem,4vw,2.1rem)}.p144-admissions-art{width:64%;opacity:.78}}
-@media(max-width:540px){.p144-admissions-hero-inner{min-height:285px}.p144-admissions-copy{width:100%;max-width:380px;padding:.65rem 1rem .65rem 0;background:linear-gradient(90deg,#0e1e38 0%,rgba(14,30,56,.99) 78%,rgba(14,30,56,.91) 91%,rgba(14,30,56,0) 100%)}.p144-admissions-copy h1{max-width:330px;font-size:1.65rem}.p144-admissions-lead{max-width:315px;font-size:.9rem}.p144-admissions-art{width:68%;opacity:.42}}
+/* Unified interior-page hero banner system.
+   Copy may run across the blueprint; the image remains clipped to the shared container.
+   A narrow dark-to-transparent edge gradient finishes every blueprint at the right. */
+.p144-people-hero .p144-container:after,
+.p144-course-hero .p144-container:after,
+.p144-research-hero .p144-container:after,
+.p144-research-detail-hero .p144-container:after,
+.p144-learning-hero .p144-container:after{
+  right:2rem;
+  width:min(62%, 760px);
+  background-image:
+    linear-gradient(to right, rgba(14,30,56,.38) 0%, rgba(14,30,56,.08) 38%, transparent 72%),
+    linear-gradient(to left, #0e1e38 0%, rgba(14,30,56,.55) 3%, transparent 16%),
+    var(--p144-hero-blueprint);
+  background-repeat:no-repeat;
+  background-position:center,center,right center;
+  background-size:100% 100%,100% 100%,auto 175%;
+}
+.p144-people-hero .p144-container:after{--p144-hero-blueprint:url("../../graph/G10.jpg")}
+.p144-course-hero .p144-container:after{--p144-hero-blueprint:url("../../graph/G11.jpg")}
+.p144-research-hero .p144-container:after{--p144-hero-blueprint:url("../../graph/G15.jpg")}
+.p144-research-detail-hero .p144-container:after{--p144-hero-blueprint:url("../../graph/G16.jpg")}
+.p144-learning-hero .p144-container:after{--p144-hero-blueprint:url("../../graph/G17.jpg")}
+.p144-people-hero-copy,.p144-course-hero-copy,.p144-research-hero-copy,.p144-research-detail-copy,.p144-learning-hero-copy{width:100%;max-width:100%;position:relative;z-index:1}
+.p144-people-hero .p144-container,.p144-course-hero .p144-container,.p144-research-hero .p144-container,.p144-research-detail-hero .p144-container,.p144-learning-hero .p144-container{overflow:hidden}
+.p144-admissions-hero{overflow:hidden}
+.p144-admissions-hero-inner{overflow:hidden;padding-right:2rem}
+.p144-admissions-art{
+  right:2rem;
+  width:min(62%, 760px);
+  object-fit:cover;
+  object-position:center right;
+  mask-image:linear-gradient(to left,#0e1e38 0%,rgba(14,30,56,.58) 3%,transparent 16%);
+}
+.p144-admissions-copy{
+  width:100%;
+  max-width:none;
+  padding:.8rem 0;
+  background:none;
+}
+.p144-admissions-copy h1,.p144-admissions-lead{max-width:760px}
+@media(max-width:900px){
+  .p144-people-hero .p144-container:after,.p144-course-hero .p144-container:after,.p144-research-hero .p144-container:after,.p144-research-detail-hero .p144-container:after,.p144-learning-hero .p144-container:after{right:1.25rem;width:68%;background-size:100% 100%,100% 100%,auto 150%}
+  .p144-admissions-hero-inner{padding-right:1.25rem}
+  .p144-admissions-art{right:1.25rem;width:68%}
+}
+@media(max-width:540px){
+  .p144-people-hero .p144-container:after,.p144-course-hero .p144-container:after,.p144-research-hero .p144-container:after,.p144-research-detail-hero .p144-container:after,.p144-learning-hero .p144-container:after{width:76%;opacity:.62;background-size:100% 100%,100% 100%,auto 125%}
+  .p144-admissions-hero-inner{min-height:285px}
+  .p144-admissions-art{width:78%;opacity:.58}
+  .p144-admissions-copy h1{font-size:1.65rem}
+  .p144-admissions-lead{font-size:.9rem}
+}
