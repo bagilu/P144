@@ -8,7 +8,7 @@
   const year = root.querySelector("#research-year");
   const sort = root.querySelector("#research-sort");
   const escapeHTML = (value) => String(value ?? "").replace(/[&<>"']/g, (ch) => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" })[ch]);
-  const recordsURL = "data/research.json?v=20261124-hsu";
+  const recordsURL = "data/research.json?v=20261124-results";
 
   fetch(recordsURL)
     .then((response) => {
@@ -59,7 +59,7 @@
             </div>
             <h2>${escapeHTML(item.title)}</h2>
             <p class="p144-research-record-author">作者：${escapeHTML(item.author)}</p>
-            <h3>研究內容</h3>
+            <h3>研究成果與貢獻</h3>
             <p class="p144-research-description">${escapeHTML(item.description)}</p>
             <details class="p144-research-source">
               <summary>APA 書目與來源</summary>
