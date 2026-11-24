@@ -578,3 +578,14 @@ html{scroll-padding-top:115px}
   .p144-admissions-copy h1{font-size:1.65rem}
   .p144-admissions-lead{font-size:.9rem}
 }
+/* Homepage department strengths infographic and readable text description */
+.p144-feature-infographic{max-width:1120px;margin:2rem auto 1rem;padding:0;background:#fff;border:1px solid var(--p144-border-light);box-shadow:0 8px 24px #07101e12}
+.p144-feature-infographic img{display:block;width:100%;height:auto}
+.p144-feature-infographic figcaption{padding:.75rem 1rem;background:#11213a;color:#fff;font-size:.86rem;line-height:1.6;text-align:center}
+.p144-feature-description{margin:0 0 2rem}
+.p144-feature-description .p144-core-heading{margin-bottom:.8rem}
+.p144-feature-description .p144-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.p144-feature-description .p144-content-card{padding:1.25rem}
+.p144-feature-description .p144-content-card h3{margin:.5rem 0}
+.p144-feature-description .p144-content-card p{line-height:1.75}
+@media(max-width:768px){.p144-feature-infographic{margin:1.5rem auto .8rem}.p144-feature-infographic figcaption{font-size:.78rem;padding:.65rem}.p144-feature-description .p144-card-grid{grid-template-columns:1fr}}
