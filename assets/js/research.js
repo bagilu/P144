@@ -57,7 +57,7 @@
               <p class="p144-research-citation">${escapeHTML(item.citation)}</p>
               <div class="p144-research-source-links">
                 <a href="${escapeHTML(item.pure)}" target="_blank" rel="noopener noreferrer">查看 PURE 著作頁 ↗</a>
-                <a href="${escapeHTML(item.doi)}" target="_blank" rel="noopener noreferrer">查看 DOI ↗</a>
+                ${item.doi ? `<a href="${escapeHTML(item.doi)}" target="_blank" rel="noopener noreferrer">查看 DOI ↗</a>` : ""}
               </div>
             </details>
           </article>`).join("") : '<p class="p144-research-empty">沒有符合條件的研究成果，請調整搜尋或篩選條件。</p>';

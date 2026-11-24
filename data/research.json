@@ -64,5 +64,38 @@
     "citation": "Chang, J., Morrison, A. M., Chen, S., & Lin, S. H. H. (2023). Soothing the taste buds and the soul? An exploratory analysis of consumption of comfort foods in international travel. Food, Culture and Society, 26(2), 479–500. https://doi.org/10.1080/15528014.2021.2015942",
     "pure": "https://tcu.elsevierpure.com/en/publications/soothing-the-taste-buds-and-the-soul-an-exploratory-analysis-of-c/",
     "doi": "https://doi.org/10.1080/15528014.2021.2015942"
+  },
+  {
+    "id": "R007",
+    "author": "蘇美惠",
+    "year": 2024,
+    "status": "",
+    "title": "達魯瑪克部落發展風能可能性調查及商業開發模式",
+    "description": "以臺東縣達魯瑪克部落為研究情境，探討風能發展可能性與商業開發模式。本筆摘要依公開題名整理；PURE 頁面未列研究摘要與結果。",
+    "citation": "Su, M.-H. (2024). 達魯瑪克部落發展風能可能性調查及商業開發模式. 臺東大學綠色科學學刊, 14(1), 122–132.",
+    "pure": "https://tcu.elsevierpure.com/en/publications/%E9%81%94%E9%AD%AF%E7%91%AA%E5%85%8B%E9%83%A8%E8%90%BD%E7%99%BC%E5%B1%95%E9%A2%A8%E8%83%BD%E5%8F%AF%E8%83%BD%E6%80%A7%E8%AA%BF%E6%9F%A5%E5%8F%8A%E5%95%86%E6%A5%AD%E9%96%8B%E7%99%BC%E6%A8%A1%E5%BC%8F/",
+    "doi": ""
+  },
+  {
+    "id": "R008",
+    "author": "蘇美惠",
+    "year": 2022,
+    "status": "",
+    "title": "生質電力之均化發電成本與敏感度分析－以農業廢棄物產製生質沼氣電力為例",
+    "description": "研究模擬以稻稈單獨發電，以及稻稈混合養豬廢水發電的情境，建立均化發電成本（LCOE）模型並進行敏感度分析。研究估算兩種情境每度電成本約為新臺幣 4.99 元與 4.28 元，並指出初期投資成本是影響 LCOE 最顯著的因素。",
+    "citation": "蘇美惠、白滌清（2022）。生質電力之均化發電成本與敏感度分析－以農業廢棄物產製生質沼氣電力為例。管理研究學報，22，79–95. https://doi.org/10.6626/MR.202212_22.0003",
+    "pure": "https://tcu.elsevierpure.com/en/publications/%E7%94%9F%E8%B3%AA%E9%9B%BB%E5%8A%9B%E4%B9%8B%E5%9D%87%E5%8C%96%E7%99%BC%E9%9B%BB%E6%88%90%E6%9C%AC%E8%88%87%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90%E4%BB%A5%E8%BE%B2%E6%A5%AD%E5%BB%A2%E6%A3%84%E7%89%A9%E7%94%A2%E8%A3%BD%E7%94%9F%E8%B3%AA%E6%B2%BC%E6%B0%A3%E9%9B%BB%E5%8A%9B%E7%82%BA%E4%BE%8B/",
+    "doi": "https://doi.org/10.6626/MR.202212_22.0003"
+  },
+  {
+    "id": "R009",
+    "author": "蘇美惠",
+    "year": 2022,
+    "status": "研討會論文",
+    "title": "稻稈產製生質沼氣電力之環境與經濟效益評估",
+    "description": "研究以稻稈產製沼氣發電為情境，建立生命週期碳足跡與均化發電成本分析模型，並進行敏感度分析。PURE 頁面摘要指出，估算每度電排放約 86 公克 CO₂e；與研究所比較的市電 509 公克 CO₂e 相較，減碳效益約 83.2%。",
+    "citation": "Su, M.-H. (2022, November 22). 稻稈產製生質沼氣電力之環境與經濟效益評估 [Conference paper]. 2022第三屆「天下為公與大愛思想的踐行」學術研討會, Hualien, Taiwan.",
+    "pure": "https://tcu.elsevierpure.com/en/publications/%E7%A8%BB%E7%A8%88%E7%94%A2%E8%A3%BD%E7%94%9F%E8%B3%AA%E6%B2%BC%E6%B0%A3%E9%9B%BB%E5%8A%9B%E4%B9%8B%E7%92%B0%E5%A2%83%E8%88%87%E7%B6%93%E6%BF%9F%E6%95%88%E7%9B%8A%E8%A9%95%E4%BC%B0/",
+    "doi": ""
   }
 ]

@@ -779,3 +779,10 @@ html{scroll-padding-top:115px}
 .p144-alumni-story-copy p{margin:.5rem 0;line-height:1.75;color:#4c5663}
 .p144-alumni-story-copy strong{color:#162a45}
 @media(max-width:760px){.p144-alumni-stories{grid-template-columns:1fr}.p144-alumni-story-copy{padding:1.25rem}}
+
+
+/* P42 internship story photos */
+.p144-internship-spotlight .p144-internship-portrait{display:grid;place-items:center;min-height:260px;margin:0;background:#f4f2ee}
+.p144-internship-spotlight .p144-internship-portrait img{display:block;width:auto;max-width:100%;height:auto;max-height:460px;object-fit:contain}
+.p144-internship-gallery{display:grid;grid-template-columns:1fr;gap:4px;background:#f4f2ee}
+.p144-internship-gallery img{display:block;width:100%;height:auto;max-height:255px;object-fit:contain;background:#f4f2ee}
