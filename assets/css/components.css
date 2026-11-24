@@ -595,3 +595,7 @@ html{scroll-padding-top:115px}
 .p144-hero-official-slogan b{color:#e2cb91;font-weight:600}
 @media(max-width:768px){.p144-hero-official-slogan{top:1rem;left:1.25rem;right:1.25rem;gap:.32rem;padding:.38rem .5rem .42rem .65rem;border-left-width:3px;font-size:clamp(.96rem,3.6vw,1.25rem);letter-spacing:.015em}}
 @media(max-width:380px){.p144-hero-official-slogan{gap:.25rem;font-size:.92rem;letter-spacing:0}}
+
+/* Move the fixed official slogan to the upper-right, inside the hero container */
+.p144-hero-official-slogan{left:auto;right:2rem;max-width:calc(100% - 4rem);justify-content:flex-end;text-align:right}
+@media(max-width:768px){.p144-hero-official-slogan{left:auto;right:1.25rem;max-width:calc(100% - 2.5rem)}}
