@@ -2,7 +2,7 @@
 // All pages remain in the project root. Fragment links resolve against the page URL.
 function initializeP144Header(host) {
   const name=location.pathname.split('/').pop()||'index.html';
-  const groups={ 'p41.html':'p4.html','p42.html':'p4.html','p43.html':'p4.html','p51.html':'p5.html','p52.html':'p5.html','p53.html':'p5.html','p54.html':'p5.html','p61.html':'p6.html','p62.html':'p6.html','p63.html':'p6.html','p64.html':'p6.html' };
+  const groups={ 'p31.html':'p3.html','p32.html':'p3.html','p41.html':'p4.html','p42.html':'p4.html','p43.html':'p4.html','p51.html':'p5.html','p52.html':'p5.html','p53.html':'p5.html','p54.html':'p5.html','p61.html':'p6.html','p62.html':'p6.html','p63.html':'p6.html','p64.html':'p6.html' };
   const active=groups[name]||name;
   host.querySelectorAll('.p144-main-nav a').forEach(link=>{
     const href=link.getAttribute('href');

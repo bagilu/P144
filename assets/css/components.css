@@ -740,3 +740,15 @@ html{scroll-padding-top:115px}
 .p144-career-detail-source{margin:.7rem 0 0;font-size:.9rem}
 .p144-career-detail-source a{color:#6d1422;font-weight:600;text-underline-offset:3px}
 @media(max-width:700px){.p144-career-detail-grid{grid-template-columns:1fr}}
+
+/* P3 directory and P54 campus life */
+.p144-course-directory-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+.p144-course-directory-grid .p144-link-card{height:100%}
+.p144-campus-life-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:2rem}
+.p144-campus-life-card{position:relative;min-height:250px;padding:2rem 1.5rem;border:1px solid rgba(22,42,69,.16);border-top:4px solid #b39a45;background:#fff;box-shadow:0 12px 30px rgba(18,36,60,.06)}
+.p144-campus-life-card>span{font-family:Inter,sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.16em;color:#9b2437}
+.p144-campus-life-card h3{margin:1.1rem 0 .8rem;color:#162a45;font-family:"Noto Serif TC",serif;font-size:1.35rem}
+.p144-campus-life-card p{line-height:1.8;color:#596475}
+.p144-campus-life-card small{display:inline-block;margin-top:.7rem;padding:.35rem .65rem;background:#f5f1e8;color:#786938;letter-spacing:.08em}
+@media(max-width:1000px){.p144-campus-life-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.p144-course-directory-grid,.p144-campus-life-grid{grid-template-columns:1fr}.p144-campus-life-card{min-height:0}}
