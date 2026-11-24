@@ -498,3 +498,24 @@ html{scroll-padding-top:115px}
  .p144-admissions-art{width:78%;opacity:.62}
 }
 @media(prefers-reduced-motion:reduce){.p144-admissions-art{scroll-behavior:auto}}
+
+
+/* P51 accessible admissions quota table */
+.p144-domestic-section{background:#f5f3ef}
+.p144-domestic-intro{max-width:920px;margin:0 0 1.2rem;color:#3c4b60;line-height:1.8}
+.p144-quota-summary{display:flex;align-items:baseline;gap:.45rem;width:max-content;margin:0 0 1rem;padding:.6rem 1rem;background:#11213a;color:#fff;border-left:4px solid #c9a348}
+.p144-quota-summary span{font-size:.86rem;color:#f3f5f8}
+.p144-quota-summary strong{font-family:var(--p144-font-display);font-size:1.65rem;color:#f0d483}
+.p144-table-scroll{max-width:100%;overflow-x:auto;background:#fff;border:1px solid #aeb8c5;overscroll-behavior-inline:contain}
+.p144-admissions-table{width:100%;min-width:650px;border-collapse:collapse;color:#17243a;font-size:.94rem;line-height:1.6}
+.p144-admissions-table caption{padding:.9rem 1rem;text-align:left;background:#fff;color:#17243a;font-weight:700}
+.p144-admissions-table th,.p144-admissions-table td{padding:.72rem .9rem;border-bottom:1px solid #d7dde5;text-align:left;vertical-align:middle}
+.p144-admissions-table thead th{background:#11213a;color:#fff;font-size:.86rem;font-weight:700}
+.p144-admissions-table tbody tr:not(.p144-admissions-group):nth-child(even){background:#f5f7fa}
+.p144-admissions-table tbody th[scope=row]{color:#17243a;font-weight:600}
+.p144-admissions-table .p144-admissions-group th{padding:.55rem .9rem;background:#e6ecf4;color:#122746;border-top:2px solid #c9a348;font-weight:700}
+.p144-admissions-table .p144-quota{text-align:center;font-variant-numeric:tabular-nums;font-weight:700}
+.p144-admissions-table tfoot th,.p144-admissions-table tfoot td{background:#11213a;color:#fff;border:0;font-weight:700}
+.p144-table-hint{margin:.45rem 0 0;color:#40516a;font-size:.78rem}
+.p144-domestic-section .p144-work-note{margin-top:1rem;background:#fff;color:#344258}
+@media(max-width:680px){.p144-admissions-table{font-size:.87rem}.p144-admissions-table th,.p144-admissions-table td{padding:.65rem .7rem}.p144-quota-summary{margin-bottom:.8rem}}
