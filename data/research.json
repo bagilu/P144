@@ -97,5 +97,38 @@
     "citation": "Su, M.-H. (2022, November 22). 稻稈產製生質沼氣電力之環境與經濟效益評估 [Conference paper]. 2022第三屆「天下為公與大愛思想的踐行」學術研討會, Hualien, Taiwan.",
     "pure": "https://tcu.elsevierpure.com/en/publications/%E7%A8%BB%E7%A8%88%E7%94%A2%E8%A3%BD%E7%94%9F%E8%B3%AA%E6%B2%BC%E6%B0%A3%E9%9B%BB%E5%8A%9B%E4%B9%8B%E7%92%B0%E5%A2%83%E8%88%87%E7%B6%93%E6%BF%9F%E6%95%88%E7%9B%8A%E8%A9%95%E4%BC%B0/",
     "doi": ""
+  },
+  {
+    "id": "R010",
+    "author": "郭又銘",
+    "year": 2023,
+    "status": "",
+    "title": "Utilizing Design Thinking for Effective Multidisciplinary Diabetes Management",
+    "description": "研究以行動研究法探索糖尿病患者的照護需求，並由醫師、護理人員、個案管理師與家屬共同參與設計思考工作坊。工作坊發展出外送與訂餐平台的糖尿病飲食指引，以及協助患者了解出院前後照護流程的衛教繪本；研究亦指出，此模式促進跨專業分享、協作與互相學習。",
+    "citation": "Hsieh, M. C., Kuo, Y. M., & Kuo, Y. L. (2023). Utilizing Design Thinking for Effective Multidisciplinary Diabetes Management. Healthcare (Switzerland), 11(13), Article 1934. https://doi.org/10.3390/healthcare11131934",
+    "pure": "https://tcu.elsevierpure.com/en/publications/utilizing-design-thinking-for-effective-multidisciplinary-diabete/",
+    "doi": "https://doi.org/10.3390/healthcare11131934"
+  },
+  {
+    "id": "R011",
+    "author": "郭又銘",
+    "year": 2021,
+    "status": "",
+    "title": "Applying Design Thinking to the Research and Development of Innovative Nursing Devices",
+    "description": "本文介紹設計思考的概念與五個階段，並以創新護理產品為例，提出由教師與學生組成的設計思考輔導模式，作為護理創新教育、產品開發與研究的參考。",
+    "citation": "Kuo, Y. M., Lin, Z. C., & Tan, A. Y. K. (2021). Applying Design Thinking to the Research and Development of Innovative Nursing Devices. Journal of Nursing, 68(6), 13–18. https://doi.org/10.6224/JN.202112_68(6).03",
+    "pure": "https://tcu.elsevierpure.com/en/publications/applying-design-thinking-to-the-research-and-development-of-innov-3/",
+    "doi": "https://doi.org/10.6224/JN.202112_68(6).03"
+  },
+  {
+    "id": "R012",
+    "author": "郭又銘",
+    "year": 2021,
+    "status": "研討會論文",
+    "title": "健康故事屋的社會影響力",
+    "description": "本文從社會脈絡與運作模式探討健康故事屋的社會影響力。該空間以親子共讀、健康主題繪本、衛教遊戲、親職講座與志工說故事等活動推廣健康素養，並促進親子互動與兒童閱讀學習。",
+    "citation": "Kuo, M. (2021, November 17). 健康故事屋的社會影響力 [Conference paper]. 2021 第二屆「天下為公與大愛思想的踐行」學術研討會, Hualien, Taiwan.",
+    "pure": "https://tcu.elsevierpure.com/en/publications/%E5%81%A5%E5%BA%B7%E6%95%85%E4%BA%8B%E5%B1%8B%E7%9A%84%E7%A4%BE%E6%9C%83%E5%BD%B1%E9%9F%BF%E5%8A%9B/",
+    "doi": ""
   }
 ]
