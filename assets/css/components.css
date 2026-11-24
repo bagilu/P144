@@ -589,3 +589,9 @@ html{scroll-padding-top:115px}
 .p144-feature-description .p144-content-card h3{margin:.5rem 0}
 .p144-feature-description .p144-content-card p{line-height:1.75}
 @media(max-width:768px){.p144-feature-infographic{margin:1.5rem auto .8rem}.p144-feature-infographic figcaption{font-size:.78rem;padding:.65rem}.p144-feature-description .p144-card-grid{grid-template-columns:1fr}}
+
+/* Fixed official department slogan on all homepage hero slides */
+.p144-hero-official-slogan{position:absolute;z-index:4;top:1.55rem;left:2rem;display:flex;align-items:center;gap:.55rem;margin:0;padding:.45rem .8rem .5rem .95rem;border-left:4px solid #c9a348;background:rgba(7,16,30,.46);color:#fff;font-family:var(--p144-font-sans);font-size:clamp(1.1rem,1.8vw,1.55rem);font-weight:700;line-height:1.35;letter-spacing:.06em;text-shadow:0 2px 8px #07101e}
+.p144-hero-official-slogan b{color:#e2cb91;font-weight:600}
+@media(max-width:768px){.p144-hero-official-slogan{top:1rem;left:1.25rem;right:1.25rem;gap:.32rem;padding:.38rem .5rem .42rem .65rem;border-left-width:3px;font-size:clamp(.96rem,3.6vw,1.25rem);letter-spacing:.015em}}
+@media(max-width:380px){.p144-hero-official-slogan{gap:.25rem;font-size:.92rem;letter-spacing:0}}
