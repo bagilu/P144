@@ -474,7 +474,8 @@ html{scroll-padding-top:115px}
 @media(max-width:768px){.p144-international-cases{grid-template-columns:1fr}.p144-international-case-featured{grid-column:auto}.p144-international-pathway{padding:1.8rem 0 2rem}.p144-international-case{padding:1rem}.p144-international-photo{min-height:230px}.p144-international-photo img{min-height:210px}}
 
 
-/* P5 admissions hero: blue campus-learning blueprint with a brief gold comet */
+
+/* P5 admissions hero: refined static campus blueprint */
 .p144-admissions-hero{position:relative;isolation:isolate;overflow:hidden;background:#0e1e38;color:#fff;border-bottom:4px solid var(--p144-gold)}
 .p144-admissions-hero-inner{position:relative;display:flex;align-items:center;min-height:270px}
 .p144-admissions-copy{position:relative;z-index:2;width:min(620px,58%);padding:.8rem 0}
@@ -483,19 +484,17 @@ html{scroll-padding-top:115px}
 .p144-admissions-kicker{margin:0 0 .65rem;color:#e2cb91;font-family:var(--p144-font-display);font-size:.82rem;font-weight:700;letter-spacing:2px}
 .p144-admissions-copy h1{max-width:620px;margin:0 0 .65rem;color:#f7f5ef;font-family:var(--p144-font-serif);font-size:clamp(1.8rem,3vw,2.4rem);line-height:1.4}
 .p144-admissions-lead{max-width:580px;margin:0;color:#dce5ef;font-size:1rem;line-height:1.75}
-.p144-admissions-art{position:absolute;z-index:1;right:1.2rem;top:50%;width:min(58%,680px);height:100%;max-height:300px;transform:translateY(-50%);overflow:visible}
-.p144-admissions-art .p144-comet{filter:drop-shadow(0 0 5px #f4d577)}
-.p144-admissions-art .p144-comet-trail{stroke-dasharray:1;opacity:.4}
+.p144-admissions-art{position:absolute;z-index:1;right:0;top:0;width:62%;height:100%;object-fit:cover;object-position:center right;pointer-events:none}
 @media(max-width:760px){
  .p144-admissions-hero-inner{min-height:245px}
  .p144-admissions-copy{width:72%}
- .p144-admissions-art{right:-1.7rem;width:66%;opacity:.72}
+ .p144-admissions-art{right:0;width:66%;opacity:.82}
 }
 @media(max-width:540px){
  .p144-admissions-hero-inner{min-height:230px}
  .p144-admissions-copy{width:100%;max-width:365px;padding-right:2.5rem}
  .p144-admissions-copy h1{font-size:1.75rem}
  .p144-admissions-lead{font-size:.9rem;max-width:340px}
- .p144-admissions-art{right:-4rem;width:78%;opacity:.5}
+ .p144-admissions-art{width:78%;opacity:.62}
 }
-@media(prefers-reduced-motion:reduce){.p144-admissions-art .p144-comet{display:none}.p144-admissions-art .p144-comet-trail{opacity:.18}}
+@media(prefers-reduced-motion:reduce){.p144-admissions-art{scroll-behavior:auto}}
