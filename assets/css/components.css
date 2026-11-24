@@ -525,3 +525,12 @@ html{scroll-padding-top:115px}
 .p144-admissions-art{right:max(calc((100vw - 1280px)/2 + 2rem),1.25rem);mask-image:linear-gradient(to right,transparent 0%,#000 18%,#000 calc(100% - 24px),transparent 100%)}
 @media(max-width:760px){.p144-admissions-art{right:max(calc((100vw - 1280px)/2 + 1.25rem),1rem)}}
 @media(max-width:540px){.p144-admissions-art{right:1rem}}
+
+
+/* Resource banners: readable text backplate and a distinct art column */
+.p144-admissions-copy{width:min(520px,48%);padding:.8rem 1.5rem .8rem 0;background:linear-gradient(90deg,#0e1e38 0%,rgba(14,30,56,.99) 70%,rgba(14,30,56,.94) 84%,rgba(14,30,56,0) 100%)}
+.p144-admissions-copy h1{max-width:500px;font-size:clamp(1.75rem,2.7vw,2.25rem)}
+.p144-admissions-lead{max-width:460px}
+.p144-admissions-art{width:58%}
+@media(max-width:760px){.p144-admissions-copy{width:min(520px,70%);padding:.8rem 1.1rem .8rem 0;background:linear-gradient(90deg,#0e1e38 0%,rgba(14,30,56,.99) 76%,rgba(14,30,56,.9) 88%,rgba(14,30,56,0) 100%)}.p144-admissions-copy h1{font-size:clamp(1.7rem,4vw,2.1rem)}.p144-admissions-art{width:64%;opacity:.78}}
+@media(max-width:540px){.p144-admissions-hero-inner{min-height:285px}.p144-admissions-copy{width:100%;max-width:380px;padding:.65rem 1rem .65rem 0;background:linear-gradient(90deg,#0e1e38 0%,rgba(14,30,56,.99) 78%,rgba(14,30,56,.91) 91%,rgba(14,30,56,0) 100%)}.p144-admissions-copy h1{max-width:330px;font-size:1.65rem}.p144-admissions-lead{max-width:315px;font-size:.9rem}.p144-admissions-art{width:68%;opacity:.42}}
