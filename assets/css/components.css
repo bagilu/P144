@@ -675,3 +675,27 @@ html{scroll-padding-top:115px}
 .p144-international-study-grid .p144-international-case ul{margin:.45rem 0;padding-left:1.2rem}
 .p144-international-study-motto{margin:1.2rem 0 .5rem;padding:1rem 1.1rem;border-left:4px solid var(--p144-gold);background:#11213a;color:#fff;font-size:1.05rem;font-weight:700;letter-spacing:.08em;text-align:center}
 @media(max-width:768px){.p144-international-study{margin:1.5rem 0;padding:1.1rem}.p144-international-study-grid{grid-template-columns:1fr;gap:.7rem}.p144-international-study-grid .p144-international-case{padding:1rem}.p144-international-study-figure{margin:1rem 0 1.3rem}}
+
+/* P42 career pathways infographic and text transcript */
+.p144-career-section{padding:.4rem 0}
+.p144-career-section>.p144-core-heading{text-align:center;margin:0 0 1rem}
+.p144-career-section>.p144-core-heading h2{margin:.4rem 0;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:clamp(1.55rem,2.6vw,2.1rem);line-height:1.4}
+.p144-career-section>.p144-core-heading p{margin:.4rem 0;color:#7a241d;font-weight:700;letter-spacing:.04em}
+.p144-career-lead{max-width:900px;margin:0 auto 1rem;text-align:center;color:#344258;line-height:1.8}
+.p144-career-infographic{max-width:1120px;margin:1.3rem auto 1.8rem;background:#fff;border:1px solid var(--p144-border-light);box-shadow:0 8px 24px #07101e12}
+.p144-career-infographic img{display:block;width:100%;height:auto}
+.p144-career-infographic figcaption{padding:.7rem 1rem;background:#11213a;color:#fff;text-align:center;font-size:.85rem}
+.p144-career-text{max-width:1120px;margin:0 auto}
+.p144-career-text>h3{margin:1.3rem 0 .7rem;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1.3rem}
+.p144-career-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.p144-career-grid .p144-content-card{padding:1.1rem}
+.p144-career-grid h4{margin:.4rem 0;color:var(--p144-navy);font-family:var(--p144-font-serif);font-size:1.05rem}
+.p144-career-grid p{color:#344258;font-size:.9rem;line-height:1.7}
+.p144-career-grid small{display:block;margin-top:.7rem;padding-top:.55rem;border-top:1px solid var(--p144-border-light);color:#6d1422;font-weight:600}
+.p144-career-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem}
+.p144-career-options article{padding:1rem;background:#f4f0e7;border-top:3px solid var(--p144-gold);text-align:center}
+.p144-career-options h4{margin:.1rem 0 .35rem;color:var(--p144-navy);font-family:var(--p144-font-serif)}
+.p144-career-options p{margin:0;color:#344258;font-size:.85rem;line-height:1.6}
+.p144-career-motto{margin:1.3rem 0;padding:1rem 1.15rem;border-left:4px solid var(--p144-gold);background:#11213a;color:#fff;font-weight:700;line-height:1.8;text-align:center}
+@media(max-width:850px){.p144-career-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.p144-career-options{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.p144-career-grid,.p144-career-options{grid-template-columns:1fr}.p144-career-infographic{margin:1rem 0 1.3rem}.p144-career-grid .p144-content-card{padding:1rem}}
