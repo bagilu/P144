@@ -185,5 +185,49 @@
     "citation": "游崑慈、林俊銘、徐宜成（2022）。入學管道、缺曠課行為與學習表現之探討－以某科技大學行銷與流通管理系為例。計量管理期刊，19(2)，105–130。",
     "pure": "https://tcu.elsevierpure.com/en/publications/%E5%85%A5%E5%AD%B8%E7%AE%A1%E9%81%93%E7%BC%BA%E6%9B%A0%E8%AA%B2%E8%A1%8C%E7%82%BA%E8%88%87%E5%AD%B8%E7%BF%92%E8%A1%A8%E7%8F%BE%E4%B9%8B%E6%8E%A2%E8%A8%8E%E4%BB%A5%E6%9F%90%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%B8%E8%A1%8C%E9%8A%B7%E8%88%87%E6%B5%81%E9%80%9A%E7%AE%A1%E7%90%86%E7%B3%BB%E7%82%BA%E4%BE%8B/",
     "doi": ""
+  },
+  {
+    "id": "R018",
+    "author": "林俊銘",
+    "year": 2026,
+    "status": "研討會摘要",
+    "title": "A Digital System for Monitoring Classroom Brainstorming and Learning Processes",
+    "description": "研究開發課堂腦力激盪數位系統 BIMS，整合匿名或化名參與、即時輸入、串列討論及互動紀錄，讓想法呈現與討論歷程可供後續分析。此摘要報告系統原型與研究設計；學習成效的比較研究仍規劃於後續進行。",
+    "citation": "Lin, C.-M., Valarie, N., & Audy. (2026). A Digital System for Monitoring Classroom Brainstorming and Learning Processes [Conference abstract]. International Conference on Educational Technology and Online Learning, Bremen, Germany.",
+    "pure": "https://tcu.elsevierpure.com/en/publications/a-digital-system-for-monitoring-classroom-brainstorming-and-learn/",
+    "doi": ""
+  },
+  {
+    "id": "R019",
+    "author": "林俊銘",
+    "year": 2025,
+    "status": "",
+    "title": "Technology-Supported Curriculum-Based Measurement for Vocabulary Development in ESP: A Case Study in Marketing Education",
+    "description": "研究建立包含 208 個高頻行銷專業詞彙的 Marketing Word List，並搭配雙語教材、線上測驗與每週形成性評量。兩個月教學介入後，學生詞彙表現顯著提升；研究也指出，這套模式有助於提升專業詞彙學習信心，並提供 ESP 課程整合教學、評量與科技工具的可複製做法。",
+    "citation": "Wu, Y.-J., & Lin, C.-M. (2025). Technology-Supported Curriculum-Based Measurement for Vocabulary Development in ESP: A Case Study in Marketing Education. English Language Teaching, 19(1), 16–33. https://doi.org/10.5539/elt.v19n1p16",
+    "pure": "https://tcu.elsevierpure.com/en/publications/technology-supported-curriculum-based-measurement-for-vocabulary--2/",
+    "doi": "https://doi.org/10.5539/elt.v19n1p16"
+  },
+  {
+    "id": "R020",
+    "author": "林俊銘",
+    "year": 2025,
+    "status": "研討會摘要",
+    "title": "A Pedagogical Study on Enhancing Peer Interaction and Learning Motivation Through Google Docs",
+    "description": "研究發現，讓學生以 Google Docs 撰寫並互相檢視學習筆記，雖增加時間壓力與同儕回饋壓力，仍能提升課堂專注與投入；同儕互評也讓學生接觸不同觀點、深化理解並改善學習成果。研究提供數位協作與同儕互動結合的教學案例。",
+    "citation": "Wu, Y.-J., Rijstabel, A. A., & Lin, C.-M. (2025). A Pedagogical Study on Enhancing Peer Interaction and Learning Motivation Through Google Docs [Conference abstract]. The 12th Asian Conference on Education & International Development, Tokyo, Japan.",
+    "pure": "https://tcu.elsevierpure.com/en/publications/a-pedagogical-study-on-enhancing-peer-interaction-and-learning-mo/",
+    "doi": ""
+  },
+  {
+    "id": "R021",
+    "author": "林俊銘",
+    "year": 2025,
+    "status": "研討會摘要",
+    "title": "Transforming University Knowledge Management Systems Under the Impact of Generative AI: Opportunities and Challenges",
+    "description": "研究將大學知識管理系統分為學習管理、圖書與學術資源、管理資訊，以及資料分析與決策支援四類。研究指出，優先推動學習管理與管理資訊系統整合，並從資料分析與決策支援系統導入生成式 AI，可能是高等教育較具可行性的轉型方向。",
+    "citation": "Lin, C.-M., & Putra Fadhila, B. P. (2025). Transforming University Knowledge Management Systems Under the Impact of Generative AI: Opportunities and Challenges [Conference abstract]. The Paris Conference on Education, Paris, France.",
+    "pure": "https://tcu.elsevierpure.com/en/publications/transforming-university-knowledge-management-systems-under-the-im/",
+    "doi": ""
   }
 ]
