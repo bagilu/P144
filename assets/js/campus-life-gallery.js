@@ -1,11 +1,7 @@
 (() => {
   const gallery = document.getElementById('campus-gallery');
   const status = document.getElementById('campus-gallery-status');
-  const dialog = document.getElementById('campus-photo-dialog');
-  const largeImage = document.getElementById('campus-photo-large');
-  const largeCaption = document.getElementById('campus-photo-large-caption');
-  const closeButton = dialog?.querySelector('.p144-campus-photo-close');
-  if (!gallery || !status || !dialog || !largeImage || !largeCaption) return;
+  if (!gallery || !status) return;
 
   const shuffle = (items) => {
     for (let i = items.length - 1; i > 0; i -= 1) {
@@ -21,12 +17,15 @@
       return response.json();
     })
     .then((photos) => {
-      shuffle(photos).forEach((photo) => {
+      shuffle(photos).forEach((photo, index) => {
         const card = document.createElement('button');
         card.type = 'button';
         card.className = 'p144-campus-photo';
-        card.setAttribute('aria-haspopup', 'dialog');
-        card.setAttribute('aria-label', `${photo.caption}；檢視大圖`);
+        card.setAttribute('aria-pressed', 'false');
+        card.setAttribute('aria-label', `${photo.caption}；點選放大`);
+        card.style.setProperty('--photo-tilt', `${(Math.random() * 4 - 2).toFixed(1)}deg`);
+        card.style.setProperty('--photo-lift', `${Math.round(Math.random() * 22)}px`);
+        card.style.setProperty('--photo-order', index);
 
         const image = document.createElement('img');
         image.src = photo.src;
@@ -40,26 +39,23 @@
         card.append(image, caption);
 
         card.addEventListener('click', () => {
-          largeImage.src = photo.src;
-          largeImage.alt = photo.caption;
-          largeCaption.textContent = photo.caption;
-          dialog.showModal();
-          closeButton?.focus();
+          const shouldExpand = !card.classList.contains('is-expanded');
+          gallery.querySelectorAll('.p144-campus-photo.is-expanded').forEach((item) => {
+            item.classList.remove('is-expanded');
+            item.setAttribute('aria-pressed', 'false');
+            item.setAttribute('aria-label', `${item.querySelector('img').alt}；點選放大`);
+          });
+          if (shouldExpand) {
+            card.classList.add('is-expanded');
+            card.setAttribute('aria-pressed', 'true');
+            card.setAttribute('aria-label', `${photo.caption}；已放大，點選縮回`);
+          }
         });
         gallery.append(card);
       });
-      status.textContent = `目前收錄 ${photos.length} 張照片；新增照片後會自動延伸排列。`;
+      status.textContent = `共 ${photos.length} 張照片，點選可放大檢視。`;
     })
     .catch(() => {
       status.textContent = '照片暫時無法載入，請稍後再試。';
     });
-
-  closeButton?.addEventListener('click', () => dialog.close());
-  dialog.addEventListener('click', (event) => {
-    if (event.target === dialog || event.target === largeImage) dialog.close();
-  });
-  dialog.addEventListener('close', () => {
-    largeImage.removeAttribute('src');
-    largeImage.alt = '';
-  });
 })();

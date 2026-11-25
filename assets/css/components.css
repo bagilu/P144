@@ -787,32 +787,16 @@ html{scroll-padding-top:115px}
 .p144-internship-gallery{display:grid;grid-template-columns:1fr;gap:4px;background:#f4f2ee}
 .p144-internship-gallery img{display:block;width:100%;height:auto;max-height:255px;object-fit:contain;background:#f4f2ee}
 
-/* P54 compact campus photo wall */
-.p144-p54-campus-page .p144-admissions-hero-inner{min-height:158px}
-.p144-p54-campus-page .p144-admissions-copy{padding:.25rem 0}
-.p144-p54-campus-page .p144-admissions-breadcrumb{margin-bottom:.35rem}
-.p144-p54-campus-page .p144-admissions-kicker{margin-bottom:.2rem}
-.p144-p54-campus-page .p144-admissions-copy h1{margin-bottom:.2rem;font-size:clamp(1.45rem,2.4vw,2rem)}
-.p144-p54-campus-page .p144-admissions-lead{margin:0;font-size:.92rem;line-height:1.5}
-.p144-campus-gallery-section{padding:.55rem 0 .7rem;background:#f7f5f0}
-.p144-campus-gallery-heading{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:.55rem}
-.p144-campus-gallery-heading .p144-section-pretitle{margin-bottom:.05rem;font-size:.66rem;letter-spacing:1.5px}
-.p144-campus-gallery-heading .p144-section-title-large{margin:0;font-size:clamp(1.2rem,2vw,1.7rem);line-height:1.3}
-.p144-campus-gallery-help{margin:0 0 .1rem;color:var(--p144-text-muted);font-size:.78rem;white-space:nowrap}
-.p144-campus-gallery{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:7px;align-items:start}
-.p144-campus-photo{display:block;width:100%;min-width:0;padding:3px 3px 0;border:1px solid #e6e3dc;border-radius:2px;background:#fff;color:var(--p144-text);text-align:left;box-shadow:0 2px 6px #17233814;cursor:zoom-in;transition:box-shadow .18s ease,transform .18s ease}
-.p144-campus-photo:hover,.p144-campus-photo:focus-visible{position:relative;z-index:2;transform:translateY(-2px);box-shadow:0 6px 14px #1723382b}
-.p144-campus-photo img{display:block;width:100%;aspect-ratio:1.32;object-fit:cover;background:#e9e7e1}
-.p144-campus-photo-caption{display:block;overflow:hidden;height:1.45em;padding:2px 1px 0;font-size:clamp(8px,.72vw,10px);line-height:1.25;white-space:nowrap;text-overflow:ellipsis;color:#344258}
-.p144-campus-gallery-status{margin:.35rem 0 0;text-align:right;font-size:.7rem;color:var(--p144-text-muted)}
-.p144-campus-photo-dialog{position:fixed;max-width:min(92vw,1200px);max-height:92vh;padding:2rem 1.2rem 1rem;border:1px solid #ffffff55;background:#101722;color:#fff;box-shadow:0 20px 70px #0008}
-.p144-campus-photo-dialog::backdrop{background:#07101eD9;backdrop-filter:blur(3px)}
-.p144-campus-photo-dialog figure{margin:0;display:grid;justify-items:center;gap:.65rem}
-.p144-campus-photo-dialog img{display:block;width:auto;height:auto;max-width:88vw;max-height:78vh;object-fit:contain}
-.p144-campus-photo-dialog figcaption{max-width:80ch;text-align:center;font-size:.95rem;line-height:1.6;color:#f5f1e8}
-.p144-campus-photo-close{position:absolute;top:.4rem;right:.55rem;width:2.1rem;height:2.1rem;border:0;border-radius:50%;background:#ffffff1a;color:#fff;font-size:1.5rem;line-height:1;cursor:pointer}
-.p144-campus-photo-close:hover{background:#ffffff30}
-@media(max-width:900px){.p144-campus-gallery{grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}}
-@media(max-width:700px){.p144-p54-campus-page .p144-admissions-hero-inner{min-height:132px}.p144-campus-gallery-section{padding:.7rem 0}.p144-campus-gallery{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.p144-campus-gallery-heading{align-items:start;flex-direction:column;gap:.15rem}.p144-campus-gallery-help{font-size:.72rem}.p144-campus-photo-caption{font-size:9px}.p144-campus-photo-dialog{padding:2.3rem .6rem .8rem}}
-@media(max-width:420px){.p144-campus-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* P54 campus life photo wall */
+.p144-campus-gallery-section{background:#f7f5f0}
+.p144-campus-gallery-intro{max-width:760px;color:var(--p144-text-muted);line-height:1.9;margin:0 0 2rem}
+.p144-campus-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2rem 1.5rem;align-items:start;padding:1rem .5rem 2rem}
+.p144-campus-photo{position:relative;z-index:0;display:block;width:100%;padding:.65rem .65rem .45rem;border:0;background:#fff;color:var(--p144-text);text-align:left;box-shadow:0 8px 22px #1723381a;transform:translateY(var(--photo-lift)) rotate(var(--photo-tilt));transition:transform .28s ease,box-shadow .28s ease;cursor:zoom-in}
+.p144-campus-photo:hover{z-index:2;transform:translateY(calc(var(--photo-lift) - 5px)) rotate(0) scale(1.025);box-shadow:0 14px 28px #1723382b}
+.p144-campus-photo img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#e9e7e1}
+.p144-campus-photo-caption{display:block;min-height:3.4em;padding:.7rem .25rem .25rem;font-family:"Noto Serif TC",serif;font-size:.88rem;line-height:1.6;color:#344258}
+.p144-campus-photo.is-expanded{z-index:20;transform:scale(1.48) rotate(0);box-shadow:0 22px 55px #07101e66;cursor:zoom-out}
+.p144-campus-gallery-status{font-size:.82rem;color:var(--p144-text-muted);text-align:center;margin:.5rem 0 0}
+@media(max-width:1000px){.p144-campus-gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:1.6rem 1.1rem}.p144-campus-photo.is-expanded{transform:scale(1.32)}}
+@media(max-width:700px){.p144-campus-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem .8rem;padding-inline:.15rem}.p144-campus-photo{padding:.45rem .45rem .3rem}.p144-campus-photo-caption{font-size:.78rem;min-height:4.2em;padding-top:.5rem}.p144-campus-photo.is-expanded{transform:scale(1.13)}.p144-campus-photo:hover{transform:translateY(var(--photo-lift)) rotate(var(--photo-tilt))}}
 @media(prefers-reduced-motion:reduce){.p144-campus-photo{transition:none}}
